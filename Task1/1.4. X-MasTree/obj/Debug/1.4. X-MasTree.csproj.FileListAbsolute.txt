@@ -1,0 +1,12 @@
+D:\Desktop\EpamPractise\Task1\Task1\1.4. X-MasTree\bin\Debug\_1._4.X_MasTree.exe.config
+D:\Desktop\EpamPractise\Task1\Task1\1.4. X-MasTree\bin\Debug\_1._4.X_MasTree.exe
+D:\Desktop\EpamPractise\Task1\Task1\1.4. X-MasTree\bin\Debug\_1._4.X_MasTree.pdb
+D:\Desktop\EpamPractise\Task1\Task1\1.4. X-MasTree\obj\Debug\1.4. X-MasTree.csprojResolveAssemblyReference.cache
+D:\Desktop\EpamPractise\Task1\Task1\1.4. X-MasTree\obj\Debug\_1._4.X_MasTree.exe
+D:\Desktop\EpamPractise\Task1\Task1\1.4. X-MasTree\obj\Debug\_1._4.X_MasTree.pdb
+C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\1.4. X-MasTree\bin\Debug\_1._4.X_MasTree.exe.config
+C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\1.4. X-MasTree\obj\Debug\_1._4.X_MasTree.exe
+C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\1.4. X-MasTree\obj\Debug\_1._4.X_MasTree.pdb
+C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\1.4. X-MasTree\bin\Debug\_1._4.X_MasTree.exe
+C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\1.4. X-MasTree\bin\Debug\_1._4.X_MasTree.pdb
+C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\1.4. X-MasTree\obj\Debug\1.4. X-MasTree.csprojResolveAssemblyReference.cache

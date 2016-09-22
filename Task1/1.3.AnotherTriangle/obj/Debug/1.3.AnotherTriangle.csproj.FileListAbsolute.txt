@@ -1,0 +1,6 @@
+D:\Desktop\EpamPractise\Task1\Task1\1.3.AnotherTriangle\bin\Debug\1.3.AnotherTriangle.exe.config
+D:\Desktop\EpamPractise\Task1\Task1\1.3.AnotherTriangle\bin\Debug\1.3.AnotherTriangle.exe
+D:\Desktop\EpamPractise\Task1\Task1\1.3.AnotherTriangle\bin\Debug\1.3.AnotherTriangle.pdb
+D:\Desktop\EpamPractise\Task1\Task1\1.3.AnotherTriangle\obj\Debug\1.3.AnotherTriangle.exe
+D:\Desktop\EpamPractise\Task1\Task1\1.3.AnotherTriangle\obj\Debug\1.3.AnotherTriangle.pdb
+D:\Desktop\EpamPractise\Task1\Task1\1.3.AnotherTriangle\obj\Debug\1.3.AnotherTriangle.csprojResolveAssemblyReference.cache
