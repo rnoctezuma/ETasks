@@ -1,0 +1,5 @@
+D:\Desktop\Repository\ETasks\Task1\1.7. ArrayProcessing\bin\Debug\_1._7.ArrayProcessing.exe.config
+D:\Desktop\Repository\ETasks\Task1\1.7. ArrayProcessing\bin\Debug\_1._7.ArrayProcessing.exe
+D:\Desktop\Repository\ETasks\Task1\1.7. ArrayProcessing\bin\Debug\_1._7.ArrayProcessing.pdb
+D:\Desktop\Repository\ETasks\Task1\1.7. ArrayProcessing\obj\Debug\_1._7.ArrayProcessing.exe
+D:\Desktop\Repository\ETasks\Task1\1.7. ArrayProcessing\obj\Debug\_1._7.ArrayProcessing.pdb

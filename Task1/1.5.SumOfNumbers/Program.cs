@@ -10,15 +10,7 @@ namespace _1._5.SumOfNumbers
     {
         static void Main(string[] args)
         {
-            int result = 0;
-            for (int i3 = 0, i5 = 0; i3 < 1000 || i5 < 1000; i3 += 3, i5 += 5)
-            {
-                result += i3;
-                if (i5 < 1000 && i5 % 3 != 0)
-                {
-                    result += i5;
-                }
-            }
+            int result = (3 + 999) * 333 / 2 + (5 + 995) * 199 / 2 - (15 + 990)*66/2;
             Console.WriteLine(result);
         }
     }

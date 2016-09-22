@@ -8,13 +8,13 @@ namespace _1._4.X_MasTree
 {
     class Program
     {
-        static void DrawRectangle(int counter, int lineCounter)
+        static void DrawTriangle(int counter, int spaceCounter)
         {
             int count = 1;
             for (int i = counter; i > 0; i--)
             {
 
-                for (int j = i + lineCounter - counter; j > 1; j--)
+                for (int j = i + spaceCounter - counter; j > 1; j--)
                 {
                     Console.Write(" ");
                 }
@@ -45,7 +45,7 @@ namespace _1._4.X_MasTree
 
             for (int counter = 1; counter <= lineCounter; counter++)
             {
-                DrawRectangle(counter, lineCounter);
+                DrawTriangle(counter, lineCounter);
             }
         }
     }

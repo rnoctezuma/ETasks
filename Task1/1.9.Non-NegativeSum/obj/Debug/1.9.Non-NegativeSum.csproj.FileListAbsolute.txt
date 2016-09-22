@@ -1,0 +1,6 @@
+D:\Desktop\Repository\ETasks\Task1\1.9.Non-NegativeSum\bin\Debug\1.9.Non-NegativeSum.exe.config
+D:\Desktop\Repository\ETasks\Task1\1.9.Non-NegativeSum\bin\Debug\1.9.Non-NegativeSum.exe
+D:\Desktop\Repository\ETasks\Task1\1.9.Non-NegativeSum\bin\Debug\1.9.Non-NegativeSum.pdb
+D:\Desktop\Repository\ETasks\Task1\1.9.Non-NegativeSum\obj\Debug\1.9.Non-NegativeSum.exe
+D:\Desktop\Repository\ETasks\Task1\1.9.Non-NegativeSum\obj\Debug\1.9.Non-NegativeSum.pdb
+D:\Desktop\Repository\ETasks\Task1\1.9.Non-NegativeSum\obj\Debug\1.9.Non-NegativeSum.csprojResolveAssemblyReference.cache

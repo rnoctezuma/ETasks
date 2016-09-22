@@ -1,0 +1,5 @@
+D:\Desktop\Repository\ETasks\Task1\1.8.NoPositive\bin\Debug\1.8.NoPositive.exe.config
+D:\Desktop\Repository\ETasks\Task1\1.8.NoPositive\bin\Debug\1.8.NoPositive.exe
+D:\Desktop\Repository\ETasks\Task1\1.8.NoPositive\bin\Debug\1.8.NoPositive.pdb
+D:\Desktop\Repository\ETasks\Task1\1.8.NoPositive\obj\Debug\1.8.NoPositive.exe
+D:\Desktop\Repository\ETasks\Task1\1.8.NoPositive\obj\Debug\1.8.NoPositive.pdb

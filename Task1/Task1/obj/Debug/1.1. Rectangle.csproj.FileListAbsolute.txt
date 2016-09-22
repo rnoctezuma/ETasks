@@ -10,3 +10,9 @@ C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\Task1\obj\Debug\Task1.pdb
 C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\Task1\bin\Debug\Task1.exe
 C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\Task1\bin\Debug\Task1.pdb
 C:\Users\rnoctezuma\Desktop\Epam Tasks\Task1\Task1\Task1\obj\Debug\1.1. Rectangle.csprojResolveAssemblyReference.cache
+D:\Desktop\Repository\ETasks\Task1\Task1\bin\Debug\Task1.exe.config
+D:\Desktop\Repository\ETasks\Task1\Task1\obj\Debug\Task1.exe
+D:\Desktop\Repository\ETasks\Task1\Task1\obj\Debug\Task1.pdb
+D:\Desktop\Repository\ETasks\Task1\Task1\bin\Debug\Task1.exe
+D:\Desktop\Repository\ETasks\Task1\Task1\bin\Debug\Task1.pdb
+D:\Desktop\Repository\ETasks\Task1\Task1\obj\Debug\1.1. Rectangle.csprojResolveAssemblyReference.cache
