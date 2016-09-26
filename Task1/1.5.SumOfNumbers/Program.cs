@@ -8,10 +8,14 @@ namespace _1._5.SumOfNumbers
 {
     class Program
     {
+        static int SumOfArithmeticSeries(int firstElement, int lastElement)
+        {
+            return (firstElement + lastElement) * (lastElement / firstElement) / 2;
+        }
+
         static void Main(string[] args)
         {
-            int result = (3 + 999) * 333 / 2 + (5 + 995) * 199 / 2 - (15 + 990)*66/2;
-            Console.WriteLine(result);
+            Console.WriteLine(SumOfArithmeticSeries(3, 999) + SumOfArithmeticSeries(5, 995) - SumOfArithmeticSeries(15, 990));
         }
     }
 }

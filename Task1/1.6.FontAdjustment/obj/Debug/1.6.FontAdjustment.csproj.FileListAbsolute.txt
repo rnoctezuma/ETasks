@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\bin\Debug\1.6.FontAdjustme
 D:\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\obj\Debug\1.6.FontAdjustment.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\obj\Debug\1.6.FontAdjustment.exe
 D:\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\obj\Debug\1.6.FontAdjustment.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\bin\Debug\1.6.FontAdjustment.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\obj\Debug\1.6.FontAdjustment.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\obj\Debug\1.6.FontAdjustment.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\bin\Debug\1.6.FontAdjustment.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\bin\Debug\1.6.FontAdjustment.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.6.FontAdjustment\obj\Debug\1.6.FontAdjustment.csprojResolveAssemblyReference.cache

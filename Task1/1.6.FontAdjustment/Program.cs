@@ -14,6 +14,7 @@ namespace _1._6.FontAdjustment
             Console.WriteLine("       1: bold");
             Console.WriteLine("       2: italic");
             Console.WriteLine("       3: underline");
+            Console.WriteLine("Press 'q' to exit");
         }
 
         static void ShowFontInfo(FontAdjustment fontInfo)
@@ -29,12 +30,11 @@ namespace _1._6.FontAdjustment
             ShowMenu();
             string command = Console.ReadLine();
             while (command != "q")
-            {
-                
+            {                
                 switch (command)
                 {
                     case "1":
-                        fontInfo = fontInfo ^ FontAdjustment.Bold;
+                        fontInfo ^= FontAdjustment.Bold;
                         break;
                     case "2":
                         fontInfo = fontInfo ^ FontAdjustment.Italic;
@@ -42,6 +42,8 @@ namespace _1._6.FontAdjustment
                     case "3":
                         fontInfo = fontInfo ^ FontAdjustment.Underline;
                         break;
+                    default:
+                        return;
                 }
                 ShowFontInfo(fontInfo);
                 ShowMenu();

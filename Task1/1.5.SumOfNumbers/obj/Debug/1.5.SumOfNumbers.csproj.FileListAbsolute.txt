@@ -13,3 +13,9 @@ D:\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\obj\Debug\1.5.SumOfNumbers.p
 D:\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\bin\Debug\1.5.SumOfNumbers.exe
 D:\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\bin\Debug\1.5.SumOfNumbers.pdb
 D:\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\obj\Debug\1.5.SumOfNumbers.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\bin\Debug\1.5.SumOfNumbers.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\obj\Debug\1.5.SumOfNumbers.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\obj\Debug\1.5.SumOfNumbers.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\bin\Debug\1.5.SumOfNumbers.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\bin\Debug\1.5.SumOfNumbers.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.5.SumOfNumbers\obj\Debug\1.5.SumOfNumbers.csprojResolveAssemblyReference.cache
