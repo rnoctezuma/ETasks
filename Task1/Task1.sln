@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.9.Non-NegativeSum", "1.9.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.10.2DArray", "1.10.2DArray\1.10.2DArray.csproj", "{2E8A02C7-D48F-462C-BE11-C674A2A4A9C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.11.AverageStringLength", "1.11.AverageStringLength\1.11.AverageStringLength.csproj", "{3720575E-8D61-4BD2-8B8F-CF8677F7D43C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.12.CharDoubler", "1.12.CharDoubler\1.12.CharDoubler.csproj", "{37BDE528-550C-4C4A-B14E-0028D07DE58D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{2E8A02C7-D48F-462C-BE11-C674A2A4A9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E8A02C7-D48F-462C-BE11-C674A2A4A9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E8A02C7-D48F-462C-BE11-C674A2A4A9C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3720575E-8D61-4BD2-8B8F-CF8677F7D43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3720575E-8D61-4BD2-8B8F-CF8677F7D43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3720575E-8D61-4BD2-8B8F-CF8677F7D43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3720575E-8D61-4BD2-8B8F-CF8677F7D43C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BDE528-550C-4C4A-B14E-0028D07DE58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BDE528-550C-4C4A-B14E-0028D07DE58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BDE528-550C-4C4A-B14E-0028D07DE58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BDE528-550C-4C4A-B14E-0028D07DE58D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

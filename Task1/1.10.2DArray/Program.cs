@@ -10,10 +10,10 @@ namespace _1._10._2DArray
     {
         public static int[,] InitArray(Random Rnd)
         {
-            int[,] array = new int[3, 3];
+            int[,] array = new int[4, 2];
             for (int i = 0; i < array.GetLength(0); i++)
                 for (int j = 0; j < array.GetLength(1); j++)
-                    array[i, j] = Rnd.Next(-100, 100);
+                    array[i, j] = Rnd.Next(-10, 10);
             return array;
         }
 
@@ -30,26 +30,18 @@ namespace _1._10._2DArray
         }
 
 
-        public static void SumEvenNumbers(int[,] array)
+        public static void SumEvenNumbers(int[,] array, Random Rnd)
         {
             int Sum = 0;
-            int rowNumber = 0;
-            Random rnd = new Random();
-            for (int i = 0; i < array.Length; i += 2)
+            for (int i = 0; i < array.GetLength(0); i++)
             {
-                if ((i / 4) % 2 == 0)
+                for (int j = i % 2; j < array.GetLength(1); j+=2)
                 {
-                    rowNumber++;
-
-                }
-                if (rowNumber % 2 == 0)
-                    Sum += array[i / 4, i % 2];
-                else
-                {
-                    if (i % 2 == 0)
-                        Sum += array[i / 4, i % 2];
+                    Sum += array[i, j];
                 }
             }
+
+
             Console.WriteLine("Sum of even elements:" + Sum);
         }
 
@@ -59,7 +51,9 @@ namespace _1._10._2DArray
             int[,] array = InitArray(Rnd);
             Console.WriteLine("Source array: ");
             PrintArray(array);
-            //SumOfEvenElements(array);
+            SumEvenNumbers(array,Rnd);
+
+         //   Console.WriteLine(1%2);
         }
     }
 }

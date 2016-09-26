@@ -4,3 +4,9 @@ C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.10.2DArray\bin\Debug\1.10.
 C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.10.2DArray\obj\Debug\1.10.2DArray.exe
 C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.10.2DArray\obj\Debug\1.10.2DArray.pdb
 C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.10.2DArray\obj\Debug\1.10.2DArray.csprojResolveAssemblyReference.cache
+D:\Desktop\Repository\ETasks\Task1\1.10.2DArray\bin\Debug\1.10.2DArray.exe.config
+D:\Desktop\Repository\ETasks\Task1\1.10.2DArray\obj\Debug\1.10.2DArray.exe
+D:\Desktop\Repository\ETasks\Task1\1.10.2DArray\obj\Debug\1.10.2DArray.pdb
+D:\Desktop\Repository\ETasks\Task1\1.10.2DArray\bin\Debug\1.10.2DArray.exe
+D:\Desktop\Repository\ETasks\Task1\1.10.2DArray\bin\Debug\1.10.2DArray.pdb
+D:\Desktop\Repository\ETasks\Task1\1.10.2DArray\obj\Debug\1.10.2DArray.csprojResolveAssemblyReference.cache
