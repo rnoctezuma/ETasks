@@ -12,6 +12,13 @@ namespace _2._1.Round
         private int y;
         private int radius;
 
+        public Round(int x, int y, int radius)
+        {
+            this.X = x;
+            this.Y = y;
+            this.Radius = radius;
+        }
+
         public int X
         {
             set
@@ -43,23 +50,13 @@ namespace _2._1.Round
                 if (value > 0)
                     this.radius = value;
                 else
-                    throw new Exception("Radius must be above than 0");
+                    throw new ArgumentException("Radius must be above than 0");
             }
             get
             {
                 return this.radius;
             }
-        }
-
-        public Round () {}
-
-        public Round(int x, int y, int radius)
-        {
-            this.X = x;
-            this.Y = y;
-            this.Radius = radius;
-        }
-
+        }        
 
         public double GetLenght
         {

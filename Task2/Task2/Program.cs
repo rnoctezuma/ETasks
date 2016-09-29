@@ -10,7 +10,7 @@ namespace _2._1.Round
     {
         static void Main(string[] args)
         {
-            Round round = new Round();
+            
             try
             {
                 Console.Write("Enter 'x' coordinate: ");
@@ -19,18 +19,16 @@ namespace _2._1.Round
                 int y = int.Parse(Console.ReadLine());
                 Console.Write("Enter 'radius' value: ");
                 int radius = int.Parse(Console.ReadLine());
-                round.X = x;
-                round.Y = y;
-                round.Radius = radius;
+                Round round = new Round(x,y,radius);
+
+                Console.WriteLine();
+                Console.WriteLine("Area of round: {0:#.##}", round.GetArea);
+                Console.WriteLine("Lenght of round: {0:#.##}", round.GetLenght);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
-            Console.WriteLine();
-            Console.WriteLine("Area of round: {0:#.##}", round.GetArea);
-            Console.WriteLine("Lenght of round: {0:#.##}", round.GetLenght);
         }
     }
 }
