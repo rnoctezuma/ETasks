@@ -8,7 +8,8 @@ namespace _1._8.NoPositive
 {
     class Program
     {
-        static int[,,] InitArray(Random Rnd)
+        static Random Rnd = new Random();
+        static int[,,] InitArray()
         {
             int[,,] array3D = new int[2, 3, 4];
             for (int i = 0; i < array3D.GetLength(0); i++)
@@ -44,8 +45,8 @@ namespace _1._8.NoPositive
 
         static void Main(string[] args)
         {
-            Random Rnd = new Random();
-            int[,,] array3D = InitArray(Rnd);
+            
+            int[,,] array3D = InitArray();
 
             Console.Write("Source array: ");
             printArray3D(array3D);

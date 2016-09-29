@@ -4,3 +4,6 @@ D:\Desktop\Repository\ETasks\Task1\1.12.CharDoubler\bin\Debug\1.12.CharDoubler.p
 D:\Desktop\Repository\ETasks\Task1\1.12.CharDoubler\obj\Debug\1.12.CharDoubler.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task1\1.12.CharDoubler\obj\Debug\1.12.CharDoubler.exe
 D:\Desktop\Repository\ETasks\Task1\1.12.CharDoubler\obj\Debug\1.12.CharDoubler.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.12.CharDoubler\bin\Debug\1.12.CharDoubler.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.12.CharDoubler\obj\Debug\1.12.CharDoubler.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.12.CharDoubler\obj\Debug\1.12.CharDoubler.pdb

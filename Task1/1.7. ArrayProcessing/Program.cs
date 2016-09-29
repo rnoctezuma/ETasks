@@ -8,6 +8,8 @@ namespace _1._7.ArrayProcessing
 {
     class Program
     {
+        static Random Rnd = new Random();
+
         static void quickSort(int[] array, int l, int r)
         {
             int temp;
@@ -57,7 +59,7 @@ namespace _1._7.ArrayProcessing
             return minValue;
         }
 
-        static int [] InitArray(Random Rnd)
+        static int [] InitArray()
         {
             int[] array = new int[10];
             for (int i = 0; i < array.Length; i++)
@@ -69,8 +71,8 @@ namespace _1._7.ArrayProcessing
 
         static void Main()
         {
-            Random Rnd = new Random();
-            int[] array = InitArray(Rnd);
+            
+            int[] array = InitArray();
             Console.Write("Source array: ");
             for (int i = 0; i < array.Length; i++)
             {

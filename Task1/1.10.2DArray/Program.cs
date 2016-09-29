@@ -8,6 +8,8 @@ namespace _1._10._2DArray
 {   
     class Program
     {
+        static Random Rnd = new Random();
+
         public static int[,] InitArray(Random Rnd)
         {
             int[,] array = new int[4, 2];
@@ -30,7 +32,7 @@ namespace _1._10._2DArray
         }
 
 
-        public static void SumEvenNumbers(int[,] array, Random Rnd)
+        public static void SumEvenNumbers(int[,] array)
         {
             int Sum = 0;
             for (int i = 0; i < array.GetLength(0); i++)
@@ -47,11 +49,11 @@ namespace _1._10._2DArray
 
         static void Main(string[] args)
         {
-            Random Rnd = new Random();
+            
             int[,] array = InitArray(Rnd);
             Console.WriteLine("Source array: ");
             PrintArray(array);
-            SumEvenNumbers(array,Rnd);
+            SumEvenNumbers(array);
 
          //   Console.WriteLine(1%2);
         }

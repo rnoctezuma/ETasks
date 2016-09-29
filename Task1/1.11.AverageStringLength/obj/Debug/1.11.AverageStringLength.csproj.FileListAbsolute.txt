@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\bin\Debug\1.11.Avera
 D:\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\obj\Debug\1.11.AverageStringLength.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\obj\Debug\1.11.AverageStringLength.exe
 D:\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\obj\Debug\1.11.AverageStringLength.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\bin\Debug\1.11.AverageStringLength.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\obj\Debug\1.11.AverageStringLength.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\obj\Debug\1.11.AverageStringLength.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\bin\Debug\1.11.AverageStringLength.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\bin\Debug\1.11.AverageStringLength.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task1\1.11.AverageStringLength\obj\Debug\1.11.AverageStringLength.csprojResolveAssemblyReference.cache

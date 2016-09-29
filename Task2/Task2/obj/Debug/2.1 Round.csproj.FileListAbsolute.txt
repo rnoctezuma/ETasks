@@ -1,0 +1,6 @@
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\Task2\bin\Debug\Task2.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\Task2\bin\Debug\Task2.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\Task2\bin\Debug\Task2.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\Task2\obj\Debug\2.1 Round.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\Task2\obj\Debug\Task2.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\Task2\obj\Debug\Task2.pdb
