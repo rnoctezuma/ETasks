@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task2\2.2. Triangle\bin\Debug\_2._2.Triangle.pdb
 D:\Desktop\Repository\ETasks\Task2\2.2. Triangle\obj\Debug\2.2. Triangle.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task2\2.2. Triangle\obj\Debug\_2._2.Triangle.exe
 D:\Desktop\Repository\ETasks\Task2\2.2. Triangle\obj\Debug\_2._2.Triangle.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.2. Triangle\bin\Debug\_2._2.Triangle.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.2. Triangle\obj\Debug\_2._2.Triangle.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.2. Triangle\obj\Debug\_2._2.Triangle.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.2. Triangle\bin\Debug\_2._2.Triangle.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.2. Triangle\bin\Debug\_2._2.Triangle.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.2. Triangle\obj\Debug\2.2. Triangle.csprojResolveAssemblyReference.cache

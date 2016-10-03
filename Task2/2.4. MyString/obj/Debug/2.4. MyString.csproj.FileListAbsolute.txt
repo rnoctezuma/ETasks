@@ -1,0 +1,6 @@
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.4. MyString\bin\Debug\_2._4.MyString.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.4. MyString\bin\Debug\_2._4.MyString.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.4. MyString\bin\Debug\_2._4.MyString.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.4. MyString\obj\Debug\_2._4.MyString.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.4. MyString\obj\Debug\_2._4.MyString.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.4. MyString\obj\Debug\2.4. MyString.csprojResolveAssemblyReference.cache

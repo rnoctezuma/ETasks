@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2._3.User
-{
+namespace _2._5.Employee
+{ 
     public class User
     {
         private string name;
@@ -14,22 +14,21 @@ namespace _2._3.User
         private int age;
         public DateTime DoB { get; set; }
 
-        public User (string name, string surname, string patronymic, DateTime dob)
+        public User(string name, string surname, string patronymic, DateTime dob, int age)
         {
             this.Name = name;
             this.Surname = surname;
             this.Patronymic = patronymic;
             this.DoB = dob;
+            this.Age = age;
         }
 
         public string Name
-        {           
+        {
             set
             {
                 if (value.Length > 1000)
                     throw new ArgumentException("Name is too long");
-                if (value == "")   //проверять на пустую строку и null
-                    throw new ArgumentException("Name empty!");
                 for (int i = 0; i < value.Length; i++)
                 {
                     if (!Char.IsLetter(value[i]))
@@ -49,8 +48,6 @@ namespace _2._3.User
             {
                 if (value.Length > 1000)
                     throw new ArgumentException("Name is too long");
-                if (value == "")
-                    throw new ArgumentException("Surname empty!");
                 for (int i = 0; i < value.Length; i++)
                 {
                     if (!Char.IsLetter(value[i]))
@@ -70,7 +67,6 @@ namespace _2._3.User
             {
                 if (value.Length > 1000)
                     throw new ArgumentException("Name is too long");
-                
                 for (int i = 0; i < value.Length; i++)
                 {
                     if (!Char.IsLetter(value[i]))
@@ -86,14 +82,19 @@ namespace _2._3.User
 
         public int Age
         {
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Age can't be negative");
+                if (value > 120)
+                    throw new ArgumentException("You are too old");
+                this.age = value;
+            }
             get
-            {                
-                DateTime dateNow = DateTime.Now;
-                this.age = dateNow.Year - DoB.Year;
-                if (dateNow.Month < DoB.Month ||
-                    (dateNow.Month == DoB.Month && dateNow.Day < DoB.Day)) this.age--;
+            {
                 return this.age;
             }
         }
     }
 }
+

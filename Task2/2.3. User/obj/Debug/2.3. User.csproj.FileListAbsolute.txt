@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task2\2.3. User\bin\Debug\_2._3.User.pdb
 D:\Desktop\Repository\ETasks\Task2\2.3. User\obj\Debug\2.3. User.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task2\2.3. User\obj\Debug\_2._3.User.exe
 D:\Desktop\Repository\ETasks\Task2\2.3. User\obj\Debug\_2._3.User.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.3. User\bin\Debug\_2._3.User.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.3. User\obj\Debug\_2._3.User.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.3. User\obj\Debug\_2._3.User.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.3. User\bin\Debug\_2._3.User.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.3. User\bin\Debug\_2._3.User.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.3. User\obj\Debug\2.3. User.csprojResolveAssemblyReference.cache

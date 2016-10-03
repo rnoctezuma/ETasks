@@ -1,0 +1,5 @@
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.5. Employee\bin\Debug\_2._5.Employee.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.5. Employee\bin\Debug\_2._5.Employee.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.5. Employee\bin\Debug\_2._5.Employee.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.5. Employee\obj\Debug\_2._5.Employee.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.5. Employee\obj\Debug\_2._5.Employee.pdb

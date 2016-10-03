@@ -19,9 +19,12 @@ namespace _2._2.Triangle
                 Console.Write("Enter 3rd triangle's side: ");
                 int thirdSide = int.Parse(Console.ReadLine());
                 Triangle triangle = new Triangle(firstSide, secondSide, thirdSide);
+            
 
                 Console.WriteLine("Area of triangle: {0:0.00}", triangle.GetArea);
                 Console.WriteLine("Perimeter of triangle: {0}", triangle.GetPerimeter);
+
+                triangle.FirstSide = 1;
             }
             catch (Exception ex)
             {

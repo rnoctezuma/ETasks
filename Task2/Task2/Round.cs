@@ -8,8 +8,8 @@ namespace _2._1.Round
 {
     public class Round
     {
-        private int x;
-        private int y;
+        public int X { get; set; }
+        public int Y { get; set; }
         private int radius;
 
         public Round(int x, int y, int radius)
@@ -17,30 +17,6 @@ namespace _2._1.Round
             this.X = x;
             this.Y = y;
             this.Radius = radius;
-        }
-
-        public int X
-        {
-            set
-            {
-                this.x = value;
-            }
-            get
-            {
-                return this.x;
-            }
-        }
-
-        public int Y
-        {
-            set
-            {
-                this.y = value;
-            }
-            get
-            {
-                return this.y;
-            }
         }
 
         public int Radius
