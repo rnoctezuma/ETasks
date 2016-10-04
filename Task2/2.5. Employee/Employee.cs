@@ -8,33 +8,63 @@ namespace _2._5.Employee
 {
     public class Employee : User
     {
-        private int workExperience;
+        private DateTime startWorking;
         private string position;
+        private int workExperience;
 
-        public Employee(string name, string surname, string patronymic, DateTime dob, int age,
-            int workExperience, string position)
-            :base(name, surname, patronymic, dob, age)
+        //constuctors
+        public Employee(string name, string surname, string patronymic, DateTime dob, DateTime startWorking, string position)
+            :base(name, surname, patronymic, dob)
         {
-            this.WorkExperience = workExperience;
+            this.StartWorking = startWorking;
             this.Position = position;
+        }
+
+        public Employee(string name, string surname, DateTime dob,
+            DateTime startWorking, string position)
+            : base(name, surname, dob)
+        {
+            this.StartWorking = startWorking;
+            this.Position = position;
+        }
+        //////////////////////////// 
+
+        public DateTime StartWorking
+        {
+            
+            get { return this.startWorking; }
+
+            set
+            {
+                if (value < this.DoB || value > DateTime.Now )
+                    throw new ArgumentException("Invalid start working value");
+                if (DateTime.Now.Year - value.Year > 150)
+                    throw new ArgumentException("You are too old");
+                this.startWorking = value;
+            }
         }
 
         public int WorkExperience
         {
-            set
+            get
             {
-                if (value < 0)
-                    throw new ArgumentException("Work experiense can't be lower than 0");
-                this.workExperience = value;
+                DateTime dateNow = DateTime.Now;
+                this.workExperience = dateNow.Year - StartWorking.Year;
+                if (dateNow.Month < StartWorking.Month ||
+                    (dateNow.Month == StartWorking.Month && dateNow.Day < StartWorking.Day)) this.workExperience--;
+                return this.workExperience;
             }
-            get { return this.workExperience; }
-
         }
 
         public string Position
         {
             get { return this.position; }
-            set { this.position = value; }
+            set
+            {
+                if (value == "" || value == null)
+                    throw new ArgumentException("Wrong Position!");
+                this.position = value;
+            }
         }
     }
 }

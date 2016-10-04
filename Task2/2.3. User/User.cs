@@ -11,8 +11,8 @@ namespace _2._3.User
         private string name;
         private string surname;
         private string patronymic;
-        private int age;
-        public DateTime DoB { get; set; }
+        private DateTime doB;
+        private int age;      
 
         public User (string name, string surname, string patronymic, DateTime dob)
         {
@@ -22,19 +22,19 @@ namespace _2._3.User
             this.DoB = dob;
         }
 
+        public User(string name, string surname, DateTime dob)
+        {
+            this.Name = name;
+            this.Surname = surname;
+            this.DoB = dob;
+        }
+
         public string Name
         {           
             set
             {
-                if (value.Length > 1000)
-                    throw new ArgumentException("Name is too long");
-                if (value == "")   //проверять на пустую строку и null
-                    throw new ArgumentException("Name empty!");
-                for (int i = 0; i < value.Length; i++)
-                {
-                    if (!Char.IsLetter(value[i]))
-                        throw new ArgumentException("Name may contain only letters.");
-                }
+                if (value == "" || value == null)
+                    throw new ArgumentException("Wrong name!");
                 this.name = value;
             }
             get
@@ -47,15 +47,8 @@ namespace _2._3.User
         {
             set
             {
-                if (value.Length > 1000)
-                    throw new ArgumentException("Name is too long");
-                if (value == "")
-                    throw new ArgumentException("Surname empty!");
-                for (int i = 0; i < value.Length; i++)
-                {
-                    if (!Char.IsLetter(value[i]))
-                        throw new ArgumentException("Surname may contain only letters.");
-                }
+                if (value == "" || value == null)
+                    throw new ArgumentException("Wrong surname!");
                 this.surname = value;
             }
             get
@@ -68,19 +61,30 @@ namespace _2._3.User
         {
             set
             {
-                if (value.Length > 1000)
-                    throw new ArgumentException("Name is too long");
-                
-                for (int i = 0; i < value.Length; i++)
-                {
-                    if (!Char.IsLetter(value[i]))
-                        throw new ArgumentException("Patronymic may contain only letters.");
-                }
+                if (value == "" || value == null)
+                    throw new ArgumentException("Wrong patronymic!");
                 this.patronymic = value;
             }
             get
             {
                 return this.patronymic;
+            }
+        }
+
+        public DateTime DoB
+        {
+            get
+            {
+                return this.doB;
+            }
+            set
+            {
+                if (value > DateTime.Now)
+                    throw new ArgumentException("Date of Birth can't be above than current date");
+                if (DateTime.Now.Year - value.Year > 150)
+                    throw new ArgumentException("You are too old");
+
+                this.doB = value;
             }
         }
 

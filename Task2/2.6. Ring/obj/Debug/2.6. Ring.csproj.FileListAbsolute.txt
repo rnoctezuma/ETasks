@@ -1,0 +1,5 @@
+D:\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.exe.config
+D:\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.exe
+D:\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.pdb
+D:\Desktop\Repository\ETasks\Task2\2.6. Ring\obj\Debug\_2._6.Ring.exe
+D:\Desktop\Repository\ETasks\Task2\2.6. Ring\obj\Debug\_2._6.Ring.pdb

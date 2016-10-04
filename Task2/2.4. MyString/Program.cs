@@ -10,14 +10,14 @@ namespace _2._4.MyString
     {
         static void Main(string[] args)
         {
-            MyString myString = new MyString(new char [] { 'a' , 'b', 'c'});
+            MyString myString = new MyString(new char [] { 'a', 'A' , 'b', 'c'});
 
-            MyString myString1 = new MyString(new char[] { 'a', 'b', 'c' });
+            MyString myString1 = new MyString(new char[] { 'a', 'b', 'c', 'n' });
 
-            MyString S = myString + myString1;
+            MyString me = (MyString)(new char[] { 'a', 'A', 'b', 'c' });
 
-            Console.Write(S.String);
-
+            char[] ara = myString1;
+            Console.WriteLine(ara);
         }
     }
 }

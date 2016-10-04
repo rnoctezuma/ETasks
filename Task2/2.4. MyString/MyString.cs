@@ -8,9 +8,9 @@ namespace _2._4.MyString
 {
     public class MyString
     {
-        public char [] charArray { get; set; }
+        public char[] charArray { get; set; }
 
-        public MyString (char[] str)
+        public MyString(char[] str)
         {
             this.charArray = str;
         }
@@ -24,7 +24,7 @@ namespace _2._4.MyString
         {
             get
             {
-                return this.charArray[index];      //должен ли индексатор обращаться к св-вам?
+                return this.charArray[index];
             }
             set
             {
@@ -32,46 +32,77 @@ namespace _2._4.MyString
             }
         }
 
+        public static int Compare(MyString firstString, MyString secondString)    //firstString > secondString -> 1; firstString < secondString -> -1;
+        {                                                                         //firstString == secondString -> 0;
+            if (firstString.Length > secondString.Length)
+                return 1;
+            if (firstString.Length < secondString.Length)
+                return -1;
+            for (int i = 0; i < firstString.Length; i++)
+            {
+                if (firstString[i] > secondString[i])
+                    return 1;
+                if (firstString[i] < secondString[i])
+                    return -1;
+            }
+            return 0;
+        }
+
+        public override bool Equals(object secondString)
+        {
+            if (Compare(this, secondString as MyString) == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool operator <(MyString firstString, MyString secondString)
+        {
+            if (Compare(firstString, secondString) == -1)
+                return true;
+            return false;
+        }
+
+        public static bool operator >(MyString firstString, MyString secondString)
+        {
+            if (Compare(firstString, secondString) == 1)
+                return true;
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return new string(this.charArray);
+        }
+
+        public static explicit operator MyString(char [] charArray)
+        {
+            return new MyString(charArray);
+        }
+
+        public static implicit operator char[] (MyString myString)
+        {
+            char[] charArray = new char[myString.Length];
+            Array.Copy(myString.charArray, charArray, myString.Length);
+            return charArray;
+        }
+
+        public int IndexOf(char searchElem)
+        {
+            for (int i = 0; i < this.Length;i++)
+            {
+                if (this.charArray[i] == searchElem)
+                    return i;
+            }
+            return -1;
+        }
+
         public static MyString operator +(MyString firstString, MyString secondString)
         {
             char[] newStr = new char[firstString.Length + secondString.Length];
-
-            for (int i = 0; i < firstString.Length; i++)
-            {
-                newStr[i] = firstString[i];
-            }
-
-            for (int i = 0; i<secondString.Length;i++)
-            {
-                newStr[firstString.Length + i] = secondString[i];
-            }
-            
+            Array.Copy(firstString.charArray, newStr, firstString.Length);
+            Array.Copy(secondString.charArray, 0, newStr, firstString.Length, secondString.Length);
             return new MyString(newStr);
         }
-
-        public void ChangeElement(int position, char newValue)
-        {
-            this.charArray[position] = newValue;
-        }
-
-        public char [] ToCharArray()
-        {
-            return this.charArray;
-        }
-
-    //    public static void
-
-
-        /*   
-           public override bool Equals(string obj)
-           {
-               return base.Equals(obj);
-           }
-   */
-        //public override string ToString()
-        //{
-        //    return 
-        //}
-
     }
 }

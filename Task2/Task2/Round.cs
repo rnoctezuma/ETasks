@@ -10,7 +10,7 @@ namespace _2._1.Round
     {
         public int X { get; set; }
         public int Y { get; set; }
-        private int radius;
+        private double radius;
 
         public Round(int x, int y, int radius)
         {
@@ -19,7 +19,7 @@ namespace _2._1.Round
             this.Radius = radius;
         }
 
-        public int Radius
+        public double Radius
         {
             set
             {
