@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Figures\Circle.cs" />
+    <Compile Include="Figures\IArea.cs" />
     <Compile Include="Figures\Line.cs" />
     <Compile Include="Figures\Rectangle.cs" />
     <Compile Include="Figures\Round.cs" />
@@ -51,7 +52,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Figures\Ring.cs" />
-    <Compile Include="Figures\RoundShape.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

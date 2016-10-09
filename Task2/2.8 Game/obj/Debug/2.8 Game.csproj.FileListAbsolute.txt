@@ -4,3 +4,6 @@ D:\Desktop\Repository\ETasks\Task2\2.8 Game\bin\Debug\2.8 Game.exe
 D:\Desktop\Repository\ETasks\Task2\2.8 Game\bin\Debug\2.8 Game.pdb
 D:\Desktop\Repository\ETasks\Task2\2.8 Game\obj\Debug\2.8 Game.exe
 D:\Desktop\Repository\ETasks\Task2\2.8 Game\obj\Debug\2.8 Game.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.8 Game\bin\Debug\2.8 Game.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.8 Game\obj\Debug\2.8 Game.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.8 Game\obj\Debug\2.8 Game.pdb

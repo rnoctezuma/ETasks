@@ -8,9 +8,9 @@ namespace _2._2.Triangle
 {
     public class Triangle
     {
-        private int firstSide { get; set; }
-        private int secondSide { get; set; }
-        private int thirdSide { get; set; }
+        private int firstSide;
+        private int secondSide;
+        private int thirdSide;
 
         public Triangle(int firstSide, int secondSide, int thirdSide)
         {
@@ -78,7 +78,7 @@ namespace _2._2.Triangle
         {
             get
             {
-                double semiPerimeter = (this.FirstSide + this.SecondSide + this.ThirdSide) / 2d;
+                double semiPerimeter = this.GetPerimeter / 2d;
                 return Math.Sqrt(semiPerimeter * (semiPerimeter - this.FirstSide) * (semiPerimeter - this.SecondSide) *
                     (semiPerimeter - this.ThirdSide));
             }

@@ -32,19 +32,11 @@ namespace _2._7.VectorGraphicsEditor.Figures
             }
         }
 
-        public double GetLength
+        public double Length
         {
             get
             {
                 return 2 * Math.PI * this.Radius;
-            }
-        }
-
-        double IFigure.GetArea
-        {
-            get
-            {
-                throw new NotImplementedException();
             }
         }
 

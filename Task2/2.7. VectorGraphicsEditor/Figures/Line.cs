@@ -21,15 +21,7 @@ namespace _2._7.VectorGraphicsEditor.Figures
             this.Y2 = y2;
         }
 
-        double IFigure.GetArea
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public double GetLength
+        public double Length
         {
             get
             {
@@ -41,7 +33,5 @@ namespace _2._7.VectorGraphicsEditor.Figures
         {
             return $"Line: X1 = {this.X1}, Y1 = {this.Y1}, X2 = {this.X2}, Y2 = {this.Y2}";
         }
-
-        
     }
 }

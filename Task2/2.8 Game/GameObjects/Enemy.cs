@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _2._8_Game.GameObjects
 {
-    abstract class Enemy : IGameObject, IMoveble
+    public abstract class Enemy : IGameObject, IMoveble
     {
-        public Box box { get; set; }
+        public Box Box { get; set; }
         public int health { get; set; }
         public bool destroy { get; set; }
 

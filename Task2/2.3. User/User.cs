@@ -12,7 +12,6 @@ namespace _2._3.User
         private string surname;
         private string patronymic;
         private DateTime doB;
-        private int age;      
 
         public User (string name, string surname, string patronymic, DateTime dob)
         {
@@ -61,7 +60,7 @@ namespace _2._3.User
         {
             set
             {
-                if (value == "" || value == null)
+                if (value == "")
                     throw new ArgumentException("Wrong patronymic!");
                 this.patronymic = value;
             }
@@ -93,10 +92,10 @@ namespace _2._3.User
             get
             {                
                 DateTime dateNow = DateTime.Now;
-                this.age = dateNow.Year - DoB.Year;
+                int age = dateNow.Year - DoB.Year;
                 if (dateNow.Month < DoB.Month ||
-                    (dateNow.Month == DoB.Month && dateNow.Day < DoB.Day)) this.age--;
-                return this.age;
+                    (dateNow.Month == DoB.Month && dateNow.Day < DoB.Day)) age--;
+                return age;
             }
         }
     }

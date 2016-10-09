@@ -56,6 +56,11 @@ namespace _2._4.MyString
                 return false;
         }
 
+        public override int GetHashCode()
+        {
+            return this.charArray.GetHashCode();
+        }
+
         public static bool operator <(MyString firstString, MyString secondString)
         {
             if (Compare(firstString, secondString) == -1)
@@ -75,7 +80,7 @@ namespace _2._4.MyString
             return new string(this.charArray);
         }
 
-        public static explicit operator MyString(char [] charArray)
+        public static explicit operator MyString(char[] charArray)
         {
             return new MyString(charArray);
         }
@@ -89,12 +94,7 @@ namespace _2._4.MyString
 
         public int IndexOf(char searchElem)
         {
-            for (int i = 0; i < this.Length;i++)
-            {
-                if (this.charArray[i] == searchElem)
-                    return i;
-            }
-            return -1;
+            return Array.IndexOf(this.charArray, searchElem);
         }
 
         public static MyString operator +(MyString firstString, MyString secondString)

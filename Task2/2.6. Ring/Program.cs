@@ -13,8 +13,8 @@ namespace _2._6.Ring
             try
             {
                 Ring ring = new Ring(1.5, 2.08, 1, 2);
-                Console.WriteLine(ring.GetArea);
-                Console.WriteLine(ring.GetLenght);
+                Console.WriteLine(ring.Area);
+                Console.WriteLine(ring.Lenght);
             }
             catch (Exception ex)
             {

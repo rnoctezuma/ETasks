@@ -12,7 +12,7 @@ namespace _2._5.Employee
         {
             try
             {
-                Employee employee = new Employee("Jack", "Hfdg", new DateTime(1850, 12, 4), new DateTime(1850, 12, 4), "");
+                Employee employee = new Employee("Jack", "Hfdg", new DateTime(1900, 12, 4), new DateTime(1901, 11, 4), "dfhrt");
                 Console.WriteLine("User:");
                 Console.WriteLine("     Full name: {0} {1} {2}", employee.Name, employee.Surname, employee.Patronymic);
                 Console.WriteLine("     Date of Birth: {0}", employee.DoB.ToShortDateString());

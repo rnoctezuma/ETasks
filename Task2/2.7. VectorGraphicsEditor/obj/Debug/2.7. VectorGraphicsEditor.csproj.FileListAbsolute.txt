@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\bin\Debug\_2._7.Vec
 D:\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\bin\Debug\_2._7.VectorGraphicsEditor.pdb
 D:\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\obj\Debug\_2._7.VectorGraphicsEditor.exe
 D:\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\obj\Debug\_2._7.VectorGraphicsEditor.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\bin\Debug\_2._7.VectorGraphicsEditor.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\obj\Debug\_2._7.VectorGraphicsEditor.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\obj\Debug\_2._7.VectorGraphicsEditor.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\bin\Debug\_2._7.VectorGraphicsEditor.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\bin\Debug\_2._7.VectorGraphicsEditor.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.7. VectorGraphicsEditor\obj\Debug\2.7. VectorGraphicsEditor.csprojResolveAssemblyReference.cache

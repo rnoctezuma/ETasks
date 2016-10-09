@@ -3,3 +3,9 @@ D:\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.exe
 D:\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.pdb
 D:\Desktop\Repository\ETasks\Task2\2.6. Ring\obj\Debug\_2._6.Ring.exe
 D:\Desktop\Repository\ETasks\Task2\2.6. Ring\obj\Debug\_2._6.Ring.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.6. Ring\obj\Debug\_2._6.Ring.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.6. Ring\obj\Debug\_2._6.Ring.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.6. Ring\obj\Debug\2.6. Ring.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task2\2.6. Ring\bin\Debug\_2._6.Ring.pdb

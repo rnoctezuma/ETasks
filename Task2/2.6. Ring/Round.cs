@@ -30,7 +30,7 @@ namespace _2._6.Ring
             }
         }
 
-        public double GetLenght
+        public double Lenght
         {
             get
             {
@@ -38,7 +38,7 @@ namespace _2._6.Ring
             }
         }
 
-        public double GetArea
+        public double Area
         {
             get
             {

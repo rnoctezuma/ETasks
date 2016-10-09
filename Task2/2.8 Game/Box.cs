@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2._8_Game
 {
-    class Box
+    public class Box
     {
         public List<Box> colliders = new List<Box>();
         public double x; //  координаты центра объекта

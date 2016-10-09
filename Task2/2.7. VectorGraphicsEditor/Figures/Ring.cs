@@ -6,60 +6,59 @@ using System.Threading.Tasks;
 
 namespace _2._7.VectorGraphicsEditor.Figures
 {
-    class Ring : IFigure
+    class Ring : IFigure, IArea
     {
         public double X { get; set; }
         public double Y { get; set; }
-        private RoundShape innerRound;
-        private RoundShape outerRound;
+        private Circle innerRound;
+        private Circle outerRound;
 
         public Ring(double x, double y, double innerRadius, double outerRadius)
         {
             if (innerRadius >= outerRadius)
                 throw new ArgumentException("inner radius can't be equal or above than outer radius");
-            if (outerRadius <= innerRadius)
-                throw new ArgumentException("outer radius can't be equal or lower than outer radius");
             this.X = x;
             this.Y = y;
-            this.innerRound = new RoundShape(innerRadius);
-            this.outerRound = new RoundShape(outerRadius);
+
+            this.innerRound = new Circle(x,y,innerRadius);
+            this.outerRound = new Circle(x,y,outerRadius);
         }
 
-        public RoundShape InnerRound
+        public double InnerRadius
         {
-            get { return this.innerRound; }
+            get { return this.innerRound.Radius; }
             set
             {
-                if (value.Radius >= this.outerRound.Radius)
+                if (value >= this.outerRound.Radius)
                     throw new ArgumentException("inner radius can't be equal or above than outer radius");
-                this.innerRound = value;
+                this.innerRound.Radius = value;
             }
         }
 
-        public RoundShape OuterRound
+        public double OuterRadius
         {
-            get { return this.outerRound; }
+            get { return this.outerRound.Radius; }
             set
             {
-                if (value.Radius <= this.innerRound.Radius)
+                if (value <= this.innerRound.Radius)
                     throw new ArgumentException("outer radius can't be equal or lower than outer radius");
-                this.outerRound = value;
+                this.outerRound.Radius = value;
             }
         }
 
-        public double GetLength
+        public double Length
         {
             get
             {
-                return this.innerRound.GetLength + this.outerRound.GetLength;
+                return this.innerRound.Length + this.outerRound.Length;
             }
         }
 
-        public double GetArea
+        public double Area
         {
             get
             {
-                return this.outerRound.GetArea - this.innerRound.GetArea;
+                return this.outerRound.Area - this.innerRound.Area;
             }
         }
 

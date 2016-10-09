@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2._7.VectorGraphicsEditor.Figures
 {
-    class Rectangle : IFigure
+    class Rectangle : IFigure, IArea
     {
         private double width;
         private double height;
@@ -47,7 +47,7 @@ namespace _2._7.VectorGraphicsEditor.Figures
             }
         }
 
-        public double GetLength
+        public double Length
         {
             get
             {
@@ -55,7 +55,7 @@ namespace _2._7.VectorGraphicsEditor.Figures
             }
         }
 
-        public double GetArea
+        public double Area
         {
             get
             {

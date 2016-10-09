@@ -10,7 +10,6 @@ namespace _2._5.Employee
     {
         private DateTime startWorking;
         private string position;
-        private int workExperience;
 
         //constuctors
         public Employee(string name, string surname, string patronymic, DateTime dob, DateTime startWorking, string position)
@@ -48,11 +47,7 @@ namespace _2._5.Employee
         {
             get
             {
-                DateTime dateNow = DateTime.Now;
-                this.workExperience = dateNow.Year - StartWorking.Year;
-                if (dateNow.Month < StartWorking.Month ||
-                    (dateNow.Month == StartWorking.Month && dateNow.Day < StartWorking.Day)) this.workExperience--;
-                return this.workExperience;
+                return this.Calculate(this.startWorking);
             }
         }
 

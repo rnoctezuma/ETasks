@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace _2._7.VectorGraphicsEditor.Figures
 {
-    public interface IFigure
+    public interface IArea
     {
-        double Length { get; }
-        string Draw();
+        double Area { get; }
     }
 }

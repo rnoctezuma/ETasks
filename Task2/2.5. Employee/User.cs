@@ -8,11 +8,10 @@ namespace _2._5.Employee
 {
     public class User
     {
-        private string name;
-        private string surname;
+        private string firstname;
+        private string lastname;
         private string patronymic;
         private DateTime doB;
-        private int age;
 
         public User(string name, string surname, string patronymic, DateTime dob)
         {
@@ -35,11 +34,11 @@ namespace _2._5.Employee
             {
                 if (value == "" || value == null)
                     throw new ArgumentException("Wrong name!");
-                this.name = value;
+                this.firstname = value;
             }
             get
             {
-                return this.name;
+                return this.firstname;
             }
         }
 
@@ -49,11 +48,11 @@ namespace _2._5.Employee
             {
                 if (value == "" || value == null)
                     throw new ArgumentException("Wrong surname!");
-                this.surname = value;
+                this.lastname = value;
             }
             get
             {
-                return this.surname;
+                return this.lastname;
             }
         }
 
@@ -92,12 +91,17 @@ namespace _2._5.Employee
         {
             get
             {
-                DateTime dateNow = DateTime.Now;
-                this.age = dateNow.Year - DoB.Year;
-                if (dateNow.Month < DoB.Month ||
-                    (dateNow.Month == DoB.Month && dateNow.Day < DoB.Day)) this.age--;
-                return this.age;
+                return this.Calculate(this.doB);
             }
+        }
+
+        public int Calculate(DateTime date)
+        {
+            DateTime dateNow = DateTime.Now;
+            int result = dateNow.Year - date.Year;
+            if (dateNow.Month < date.Month ||
+                (dateNow.Month == date.Month && dateNow.Day < date.Day)) result--;
+            return result;
         }
     }
 }

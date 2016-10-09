@@ -17,49 +17,48 @@ namespace _2._6.Ring
         {
             if (innerRadius >= outerRadius)
                 throw new ArgumentException("inner radius can't be equal or above than outer radius");
-            if (outerRadius <= innerRadius)
-                throw new ArgumentException("outer radius can't be equal or lower than outer radius");
+
             this.X = x;
             this.Y = y;
             this.innerRound = new Round(innerRadius);
             this.outerRound = new Round(outerRadius);
         }
 
-        public Round InnerRound
+        public double InnerRadius
         {
-            get { return this.innerRound; }
+            get { return this.innerRound.Radius; }
             set
             {
-                if (value.Radius >= this.outerRound.Radius)
+                if (value >= this.outerRound.Radius)
                     throw new ArgumentException("inner radius can't be equal or above than outer radius");
-                this.innerRound = value;
+                this.innerRound.Radius = value;
             }
         }
 
-        public Round OuterRound
+        public double OuterRadius
         {
-            get { return this.outerRound; }
+            get { return this.outerRound.Radius; }
             set
             {
-                if (value.Radius <= this.innerRound.Radius)
+                if (value <= this.innerRound.Radius)
                     throw new ArgumentException("outer radius can't be equal or lower than outer radius");
-                this.outerRound = value;
+                this.outerRound.Radius = value;
             }
         }
 
-        public double GetLenght
+        public double Lenght
         {
             get
             {
-                return this.innerRound.GetLenght + this.outerRound.GetLenght;
+                return this.innerRound.Lenght + this.outerRound.Lenght;
             }
         }
 
-        public double GetArea
+        public double Area
         {
             get
             {
-                return this.outerRound.GetArea - this.innerRound.GetArea;
+                return this.outerRound.Area - this.innerRound.Area;
             }
         }
 
