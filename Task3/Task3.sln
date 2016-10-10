@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.1. Lost", "Task3\3.1. Lost.csproj", "{E6D81897-FE72-4328-87C6-7DE92B0FFBB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.2. WordFrequency", "3.2. WordFrequency\3.2. WordFrequency.csproj", "{8B110450-401A-49AC-AC53-48116F500FE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.3. DynamicArray", "3.3. DynamicArray\3.3. DynamicArray.csproj", "{32E10A5C-0396-43E3-94C3-52D3A62BB567}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6D81897-FE72-4328-87C6-7DE92B0FFBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6D81897-FE72-4328-87C6-7DE92B0FFBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6D81897-FE72-4328-87C6-7DE92B0FFBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6D81897-FE72-4328-87C6-7DE92B0FFBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B110450-401A-49AC-AC53-48116F500FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B110450-401A-49AC-AC53-48116F500FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B110450-401A-49AC-AC53-48116F500FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B110450-401A-49AC-AC53-48116F500FE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E10A5C-0396-43E3-94C3-52D3A62BB567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E10A5C-0396-43E3-94C3-52D3A62BB567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E10A5C-0396-43E3-94C3-52D3A62BB567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E10A5C-0396-43E3-94C3-52D3A62BB567}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
