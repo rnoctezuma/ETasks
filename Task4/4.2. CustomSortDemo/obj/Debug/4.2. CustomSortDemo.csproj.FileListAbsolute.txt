@@ -1,0 +1,6 @@
+D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\bin\Debug\_4._2.CustomSortDemo.exe.config
+D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\bin\Debug\_4._2.CustomSortDemo.exe
+D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\bin\Debug\_4._2.CustomSortDemo.pdb
+D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\_4._2.CustomSortDemo.exe
+D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\_4._2.CustomSortDemo.pdb
+D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\4.2. CustomSortDemo.csprojResolveAssemblyReference.cache
