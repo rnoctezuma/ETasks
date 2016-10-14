@@ -11,13 +11,11 @@ namespace _3._3.DynamicArray
         private static void Main(string[] args)
         {
             DynamicArray<int> array = new DynamicArray<int>(new int[] { 1, 2, 5, -1 });
-
-            int[] newint = new int[3];
-            array.CopyTo(newint, 0);
-            foreach (var item in newint)
+            foreach (var item in array)
             {
                 Console.WriteLine(item);
             }
+            
 
             /*
             for (int i = 0; i < 5; i++)

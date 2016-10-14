@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task3\Task3\bin\Debug\Task3.pdb
 D:\Desktop\Repository\ETasks\Task3\Task3\obj\Debug\3.1. Lost.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task3\Task3\obj\Debug\Task3.exe
 D:\Desktop\Repository\ETasks\Task3\Task3\obj\Debug\Task3.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\Task3\bin\Debug\Task3.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\Task3\obj\Debug\Task3.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\Task3\obj\Debug\Task3.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\Task3\bin\Debug\Task3.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\Task3\bin\Debug\Task3.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\Task3\obj\Debug\3.1. Lost.csprojResolveAssemblyReference.cache

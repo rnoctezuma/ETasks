@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3._3.DynamicArray
+namespace _3._4.HardcodeMode
 {
-    public class DynamicArray<T> : IEnumerable<T>, IEnumerable, IList<T>, IList, ICollection<T>, ICollection
+    public class DynamicArray<T> : IEnumerable<T>, IEnumerable, IList<T>, IList, ICollection<T>, ICollection, ICloneable
     {
-        private T[] array;
+        protected T[] array;
         public int Length { get; private set; }
 
         public int Capacity
@@ -17,6 +17,19 @@ namespace _3._3.DynamicArray
             get
             {
                 return this.array.Length;
+            }
+            set
+            {
+                if (value < 0)
+                    throw new ArgumentException();
+                if (value < this.array.Length)
+                {
+                    T[] temp = new T[value];
+                    Array.Copy(this.array, temp, value);
+                    this.array = temp;
+                    this.Length = value;
+                }
+                Array.Resize(ref this.array, value);
             }
         }
 
@@ -70,7 +83,7 @@ namespace _3._3.DynamicArray
         }
 
         public DynamicArray()
-            :this(8)
+            : this(8)
         {
         }
 
@@ -216,15 +229,26 @@ namespace _3._3.DynamicArray
         {
             get
             {
-                if (index < 0 || index >= this.Length)
+                if (Math.Abs(index) > this.Length)
                     throw new IndexOutOfRangeException("out of range!");
+                if (index<0)
+                {
+                    return this.array[this.Length + index];
+                }
                 return this.array[index];
             }
             set
             {
-                if (index < 0 || index >= this.Length)
+                if (Math.Abs(index) > this.Length)
                     throw new IndexOutOfRangeException("out of range!");
-                this.array[index] = value;
+                if (index < 0)
+                {
+                    this.array[this.Length + index] = value;
+                }
+                else
+                {
+                    this.array[index] = value;
+                }
             }
         }
 
@@ -273,6 +297,18 @@ namespace _3._3.DynamicArray
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
+
+        public T[] ToArray ()
+        {
+            T[] temp = new T[this.Length];
+            Array.Copy(this.array, temp, this.Length);
+            return temp;
+        }
+
         /////////////////////////////////////////////   nested class Enumator
         public class Enumerator : IEnumerator<T>, IEnumerator
         {
@@ -312,7 +348,6 @@ namespace _3._3.DynamicArray
                 this.last = -1;
             }
         }
-
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }

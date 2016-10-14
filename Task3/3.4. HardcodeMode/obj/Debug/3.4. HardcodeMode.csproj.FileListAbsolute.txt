@@ -1,0 +1,6 @@
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.4. HardcodeMode\bin\Debug\_3._4.HardcodeMode.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.4. HardcodeMode\bin\Debug\_3._4.HardcodeMode.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.4. HardcodeMode\bin\Debug\_3._4.HardcodeMode.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.4. HardcodeMode\obj\Debug\_3._4.HardcodeMode.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.4. HardcodeMode\obj\Debug\_3._4.HardcodeMode.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.4. HardcodeMode\obj\Debug\3.4. HardcodeMode.csprojResolveAssemblyReference.cache

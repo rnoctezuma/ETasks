@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.2. WordFrequency", "3.2. 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.3. DynamicArray", "3.3. DynamicArray\3.3. DynamicArray.csproj", "{32E10A5C-0396-43E3-94C3-52D3A62BB567}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.4. HardcodeMode", "3.4. HardcodeMode\3.4. HardcodeMode.csproj", "{F967FF8C-3879-47A8-BBED-215D6C0B1D4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{32E10A5C-0396-43E3-94C3-52D3A62BB567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32E10A5C-0396-43E3-94C3-52D3A62BB567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32E10A5C-0396-43E3-94C3-52D3A62BB567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F967FF8C-3879-47A8-BBED-215D6C0B1D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F967FF8C-3879-47A8-BBED-215D6C0B1D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F967FF8C-3879-47A8-BBED-215D6C0B1D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F967FF8C-3879-47A8-BBED-215D6C0B1D4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

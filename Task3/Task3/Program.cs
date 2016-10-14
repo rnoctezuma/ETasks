@@ -17,7 +17,7 @@ namespace Task3
                 if (count % 2 != 0)
                 {
                     persons.Enqueue(temp);
-                    Console.WriteLine("Added {0}; count {1}", temp.ShowPerson(), count);
+                    Console.WriteLine("Added {0}", temp.ShowPerson());
                 }
                 count++;
             }
@@ -25,7 +25,7 @@ namespace Task3
 
         private static void Main(string[] args)
         {
-            int N = 2;
+            int N = 10;
             Queue<Person> persons = new Queue<Person>(N);
             for (int i = 1; i <= N; i++)
             {

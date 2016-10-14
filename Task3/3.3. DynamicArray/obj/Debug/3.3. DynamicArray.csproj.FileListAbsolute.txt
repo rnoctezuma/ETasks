@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\bin\Debug\_3._3.DynamicArra
 D:\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\obj\Debug\3.3. DynamicArray.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\obj\Debug\_3._3.DynamicArray.exe
 D:\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\obj\Debug\_3._3.DynamicArray.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\bin\Debug\_3._3.DynamicArray.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\obj\Debug\_3._3.DynamicArray.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\obj\Debug\_3._3.DynamicArray.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\bin\Debug\_3._3.DynamicArray.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\bin\Debug\_3._3.DynamicArray.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.3. DynamicArray\obj\Debug\3.3. DynamicArray.csprojResolveAssemblyReference.cache
