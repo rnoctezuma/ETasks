@@ -20,7 +20,7 @@ namespace _4._3.SortingUnit
             }
             Console.WriteLine();
             sortUnit.SortComplete += SortingUnit.SortFinished;
-            sortUnit.QuickSort(array, 0, array.Length - 1, sortUnit.Predicate);
+            sortUnit.BubbleSort(array,sortUnit.Predicate);
 
             Console.Write("Modified array: ");
             for (int i = 0; i < array.Length; i++)
