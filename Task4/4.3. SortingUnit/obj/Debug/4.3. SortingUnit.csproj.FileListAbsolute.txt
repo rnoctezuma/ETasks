@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\bin\Debug\_4._3.SortingUnit.
 D:\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\obj\Debug\4.3. SortingUnit.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\obj\Debug\_4._3.SortingUnit.exe
 D:\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\obj\Debug\_4._3.SortingUnit.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\bin\Debug\_4._3.SortingUnit.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\obj\Debug\_4._3.SortingUnit.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\obj\Debug\_4._3.SortingUnit.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\bin\Debug\_4._3.SortingUnit.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\bin\Debug\_4._3.SortingUnit.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.3. SortingUnit\obj\Debug\4.3. SortingUnit.csprojResolveAssemblyReference.cache

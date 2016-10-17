@@ -10,7 +10,7 @@ namespace _3._2.WordFrequency
     {
         public bool Equals(string x, string y)
         {
-            return String.Compare(x, y, true) == 0 ? true : false;
+            return String.Compare(x, y, true) == 0;
         }
 
         public int GetHashCode(string obj)

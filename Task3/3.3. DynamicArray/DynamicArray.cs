@@ -28,29 +28,50 @@ namespace _3._3.DynamicArray
             }
         }
 
-        bool ICollection<T>.IsReadOnly { get; }
-        bool IList.IsReadOnly { get; }
-        bool IList.IsFixedSize { get; }
-        bool ICollection.IsSynchronized { get; }
-        object ICollection.SyncRoot { get; }
+        public bool IsReadOnly
+        {
+            get
+            {
+                return false;
+            }
+        }
 
+        public bool IsFixedSize
+        {
+            get
+            {
+                return false;
+            }
+        }
+        public bool IsSynchronized
+        {
+            get
+            {
+                return this.array.IsSynchronized;
+            }
+        }
+        public object SyncRoot
+        {
+            get
+            {
+                return this.array.SyncRoot;
+            }
+        }
         object IList.this[int index]          ////Как быть с индексатором?
         {
             get
             {
-                throw new NotImplementedException();
+                return this[index];
             }
-
             set
             {
-                throw new NotImplementedException();
+                this[index] = (T)value;
             }
         }
 
         public DynamicArray()
+            :this(8)
         {
-            this.array = new T[8];
-            this.Length = 0;
         }
 
         public DynamicArray(int capacity)
@@ -65,7 +86,12 @@ namespace _3._3.DynamicArray
         {
             this.Length = sourceCollection.Count();
             this.array = new T[this.Length];
-            Array.Copy((Array)sourceCollection, this.array, this.Length);
+            int count = 0;
+            foreach (var item in sourceCollection)
+            {
+                this[count] = item;
+                count++;
+            }
         }
 
         public void Add(T value)
@@ -81,17 +107,9 @@ namespace _3._3.DynamicArray
             }
         }
 
-        public int Add(object value)        //IList
+        int IList.Add(object value)
         {
-            if (this.Capacity > this.Length)
-            {
-                this[this.Length++] = (T)value;
-            }
-            else
-            {
-                Array.Resize(ref this.array, this.Capacity * 2);
-                this[this.Length++] = (T)value;
-            }
+            this.Add((T)value);
             return this.Length - 1;
         }
 
@@ -100,13 +118,23 @@ namespace _3._3.DynamicArray
             int sourceLength = sourceCollection.Count();
             if (this.Length + sourceLength <= this.Capacity)
             {
-                Array.Copy((Array)sourceCollection, 0, this.array, this.Length, sourceLength);
+                int i = this.Length;
+                foreach (var item in sourceCollection)
+                {
+                    this.array[i] = item;
+                    i++;
+                }
                 this.Length += sourceLength;
             }
             else
             {
                 Array.Resize(ref this.array, this.Length + sourceLength);
-                Array.Copy((Array)sourceCollection, 0, this.array, this.Length, sourceLength);
+                int i = this.Length;
+                foreach (var item in sourceCollection)
+                {
+                    this.array[i] = item;
+                    i++;
+                }
                 this.Length += sourceLength;
             }
         }
@@ -134,26 +162,9 @@ namespace _3._3.DynamicArray
             return true;
         }
 
-        public void Remove(object item)  ////IList
+        void IList.Remove(object item)
         {
-            var itemNumber = this.IndexOf((T)item);
-            if (itemNumber == -1)
-            {
-                return;
-            }
-
-            for (int i = itemNumber; i < this.Length; i++)
-            {
-                if (i != this.Length - 1)
-                {
-                    this[i] = this[i + 1];
-                }
-                else
-                {
-                    this[i] = default(T);
-                }
-            }
-            this.Length--;
+            this.Remove((T)item);
         }
 
         public void RemoveAt(int index)  ////IList<T>
@@ -197,25 +208,7 @@ namespace _3._3.DynamicArray
 
         public bool Insert(T item, int index)  ////bool Insert
         {
-            if (this.Capacity > this.Length)               //Когда может быть неуспешно?
-            {
-                this.Length++;
-                for (int i = this.Length - 1; i > index; i--)
-                {
-                    this[i] = this[i - 1];
-                }
-                this[index] = item;
-            }
-            else
-            {
-                Array.Resize(ref this.array, this.Capacity * 2);
-                this.Length++;
-                for (int i = this.Length - 1; i > index; i--)
-                {
-                    this[i] = this[i - 1];
-                }
-                this[index] = item;
-            }
+            this.Insert(index, item);
             return true;
         }
 
@@ -275,7 +268,7 @@ namespace _3._3.DynamicArray
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new Enumerator(this.array);
+            return new Enumerator(this.array, this.Length);
         }
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
@@ -285,17 +278,19 @@ namespace _3._3.DynamicArray
         {
             private T[] array;
             private int last = -1;
+            private int arrayLength;
 
-            internal Enumerator(T[] array)
+            internal Enumerator(T[] array, int arrayLength)
             {
                 this.array = array;
+                this.arrayLength = arrayLength;
             }
 
             public T Current
             {
                 get
                 {
-                    if (this.last < 0 || this.last >= this.array.Length)
+                    if (this.last < 0 || this.last >= this.arrayLength)
                         throw new InvalidOperationException();
                     return this.array[last];
                 }
@@ -309,7 +304,7 @@ namespace _3._3.DynamicArray
 
             public bool MoveNext()
             {
-                return (++this.last < this.array.Length);
+                return (++this.last < this.arrayLength);
             }
 
             public void Reset()

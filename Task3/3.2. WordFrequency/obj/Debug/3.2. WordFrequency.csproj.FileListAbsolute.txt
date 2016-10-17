@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\bin\Debug\_3._2.WordFreque
 D:\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\obj\Debug\3.2. WordFrequency.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\obj\Debug\_3._2.WordFrequency.exe
 D:\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\obj\Debug\_3._2.WordFrequency.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\bin\Debug\_3._2.WordFrequency.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\obj\Debug\_3._2.WordFrequency.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\obj\Debug\_3._2.WordFrequency.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\bin\Debug\_3._2.WordFrequency.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\bin\Debug\_3._2.WordFrequency.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task3\3.2. WordFrequency\obj\Debug\3.2. WordFrequency.csprojResolveAssemblyReference.cache

@@ -32,7 +32,6 @@ namespace Task4
             for (int j = left; j <= right; j++)
             {
                 if (Predicate(array[right], array[j]))
-
                 {
                     T t = array[i];
                     array[i] = array[j];
@@ -45,6 +44,8 @@ namespace Task4
 
         private static void QuickSort<T>(T[] m, int left, int right, Func<T, T, bool> Predicate)
         {
+            if (Predicate == null)
+                throw new ArgumentNullException(nameof(Predicate));
             if (left >= right) return;
             int c = Partition(m, left, right, Predicate);
             QuickSort(m, left, c - 1, Predicate);

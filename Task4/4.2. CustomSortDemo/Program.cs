@@ -10,16 +10,19 @@ namespace _4._2.CustomSortDemo
     {
         private static bool Predicate(string x, string y)
         {
+            bool isEqual = true;
             if (x.Length > y.Length)
                 return false;
             if (y.Length > x.Length)
                 return true;
             for (int i = 0; i < x.Length; i++)
             {
-                if (x[i] < y[i])  //если x == y дописать проверку и вернуть true
+                if (x[i] < y[i])
                     return true;
+                if (x[i] != y[i])
+                    isEqual = false;
             }
-            return false;
+            return isEqual;
         }
 
         private static int Partition<T>(T[] array, int left, int right, Func<T, T, bool> Predicate)
@@ -40,6 +43,8 @@ namespace _4._2.CustomSortDemo
 
         private static void QuickSort<T>(T[] m, int left, int right, Func<T, T, bool> Predicate)
         {
+            if (Predicate == null)
+                throw new ArgumentNullException(nameof(Predicate));
             if (left >= right) return;
             int c = Partition(m, left, right, Predicate);
             QuickSort(m, left, c - 1, Predicate);

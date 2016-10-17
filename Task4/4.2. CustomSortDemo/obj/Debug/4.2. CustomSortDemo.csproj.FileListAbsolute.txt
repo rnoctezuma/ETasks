@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\bin\Debug\_4._2.CustomSor
 D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\_4._2.CustomSortDemo.exe
 D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\_4._2.CustomSortDemo.pdb
 D:\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\4.2. CustomSortDemo.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\bin\Debug\_4._2.CustomSortDemo.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\_4._2.CustomSortDemo.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\_4._2.CustomSortDemo.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\bin\Debug\_4._2.CustomSortDemo.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\bin\Debug\_4._2.CustomSortDemo.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.2. CustomSortDemo\obj\Debug\4.2. CustomSortDemo.csprojResolveAssemblyReference.cache
