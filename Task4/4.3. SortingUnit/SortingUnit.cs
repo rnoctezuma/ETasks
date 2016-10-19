@@ -7,42 +7,68 @@ using System.Threading.Tasks;
 
 namespace _4._3.SortingUnit
 {
-    public class SortingUnit
+    public class SortUnit<T>
     {
+        private T[] array;
+        private Func<T, T, int> predicate;
 
-        public event EventHandler <EventArgs> SortComplete;
-
-        public static void SortFinished(object sender, EventArgs e)
+        public T[] Array
         {
-            Console.WriteLine("Sort Finished");
+            get { return this.array; }
+            set
+            {
+                if (value == null)
+                    throw new ArgumentNullException(nameof(array));
+                this.array = value;
+            }
         }
 
-        public void BubbleSort<T>(T[] array, Func<T, T, bool> Predicate)
+        public Func<T, T, int> Predicate
         {
+            get { return this.predicate; }
+            set
+            {
+                if (this.Predicate == null)
+                    throw new ArgumentNullException(nameof(predicate));
+                this.predicate = value;
+            }
+        }
+
+        public event EventHandler<EventArgs> SortComplete;
+
+        public SortUnit(T[] array, Func<T, T, int> Predicate)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
             if (Predicate == null)
                 throw new ArgumentNullException(nameof(Predicate));
+            this.Array = array;
+            this.Predicate = Predicate;
+        }
+
+        public void Sort()
+        {
             T temp;
-            for (int i = 0; i < array.Length - 1; i++)
+            for (int i = 0; i < this.Array.Length - 1; i++)
             {
-                for (int j = i + 1; j < array.Length; j++)
+                for (int j = i + 1; j < this.Array.Length; j++)
                 {
-                    if (Predicate(array[j], array[i]))
+                    if (this.Predicate(this.Array[j], this.Array[i]) < 0)
                     {
-                        temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
+                        temp = this.Array[i];
+                        this.Array[i] = this.Array[j];
+                        this.Array[j] = temp;
                     }
                 }
             }
             SortComplete?.Invoke(this, new EventArgs());
         }
 
-        public bool Predicate<T>(T first, T second)
-            where T : IComparable<T>
+        public void SortInSeparateThread()
         {
-            return (first.CompareTo(second) <= 0);
+            Thread sortThread = new Thread(Sort);
+            sortThread.Start();
+            Thread.Sleep(200);
         }
     }
 }
-
-//Проверить на инженерную форму записи числа в 4.4

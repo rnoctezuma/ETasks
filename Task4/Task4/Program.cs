@@ -20,18 +20,18 @@ namespace Task4
             return array;
         }
 
-        private static bool Predicate<T>(T first, T second)
+        private static int Predicate<T>(T first, T second)
             where T : IComparable<T>
         {
-            return (first.CompareTo(second) >= 0);
+            return first.CompareTo(second);
         }
 
-        private static int Partition<T>(T[] array, int left, int right, Func<T, T, bool> Predicate)
+        private static int Partition<T>(T[] array, int left, int right, Func<T, T, int> Predicate)
         {
             int i = left;
             for (int j = left; j <= right; j++)
             {
-                if (Predicate(array[right], array[j]))
+                if (Predicate(array[right], array[j]) >= 0)
                 {
                     T t = array[i];
                     array[i] = array[j];
@@ -42,7 +42,7 @@ namespace Task4
             return i - 1;
         }
 
-        private static void QuickSort<T>(T[] m, int left, int right, Func<T, T, bool> Predicate)
+        private static void QuickSort<T>(T[] m, int left, int right, Func<T, T, int> Predicate)
         {
             if (Predicate == null)
                 throw new ArgumentNullException(nameof(Predicate));

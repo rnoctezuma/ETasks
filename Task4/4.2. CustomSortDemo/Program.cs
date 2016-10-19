@@ -8,29 +8,29 @@ namespace _4._2.CustomSortDemo
 {
     internal class Program
     {
-        private static bool Predicate(string x, string y)
+        private static int Predicate(string x, string y)
         {
-            bool isEqual = true;
+            int isEqual = 0;
             if (x.Length > y.Length)
-                return false;
+                return 1;
             if (y.Length > x.Length)
-                return true;
+                return -1;
             for (int i = 0; i < x.Length; i++)
             {
                 if (x[i] < y[i])
-                    return true;
+                    return -1;
                 if (x[i] != y[i])
-                    isEqual = false;
+                    isEqual = 1;
             }
             return isEqual;
         }
 
-        private static int Partition<T>(T[] array, int left, int right, Func<T, T, bool> Predicate)
+        private static int Partition<T>(T[] array, int left, int right, Func<T, T, int> Predicate)
         {
             int i = left;
             for (int j = left; j <= right; j++)
             {
-                if (Predicate(array[j], array[right]))
+                if (Predicate(array[j], array[right]) <= 0)
                 {
                     T t = array[i];
                     array[i] = array[j];
@@ -41,7 +41,7 @@ namespace _4._2.CustomSortDemo
             return i - 1;
         }
 
-        private static void QuickSort<T>(T[] m, int left, int right, Func<T, T, bool> Predicate)
+        private static void QuickSort<T>(T[] m, int left, int right, Func<T, T, int> Predicate)
         {
             if (Predicate == null)
                 throw new ArgumentNullException(nameof(Predicate));
