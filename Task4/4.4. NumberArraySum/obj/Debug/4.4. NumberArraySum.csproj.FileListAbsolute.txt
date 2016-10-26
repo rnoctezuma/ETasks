@@ -3,3 +3,6 @@ D:\Desktop\Repository\ETasks\Task4\4.4. NumberArraySum\bin\Debug\_4._4.NumberArr
 D:\Desktop\Repository\ETasks\Task4\4.4. NumberArraySum\bin\Debug\_4._4.NumberArraySum.pdb
 D:\Desktop\Repository\ETasks\Task4\4.4. NumberArraySum\obj\Debug\_4._4.NumberArraySum.exe
 D:\Desktop\Repository\ETasks\Task4\4.4. NumberArraySum\obj\Debug\_4._4.NumberArraySum.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.4. NumberArraySum\bin\Debug\_4._4.NumberArraySum.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.4. NumberArraySum\obj\Debug\_4._4.NumberArraySum.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.4. NumberArraySum\obj\Debug\_4._4.NumberArraySum.pdb

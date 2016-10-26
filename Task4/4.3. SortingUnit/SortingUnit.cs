@@ -11,6 +11,7 @@ namespace _4._3.SortingUnit
     {
         private T[] array;
         private Func<T, T, int> predicate;
+        public event EventHandler<EventArgs> SortComplete;
 
         public T[] Array
         {
@@ -34,7 +35,7 @@ namespace _4._3.SortingUnit
             }
         }
 
-        public event EventHandler<EventArgs> SortComplete;
+        
 
         public SortUnit(T[] array, Func<T, T, int> Predicate)
         {

@@ -10,7 +10,7 @@ namespace _4._5.ToIntOrNotToInt
     {
         private static void Main(string[] args)
         {
-            string s = "1.244e4";
+            string s = "1.4545e4";
 
             Console.WriteLine(s.IsPositiveIntNumber());
         }

@@ -1,0 +1,5 @@
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\bin\Release\4.6 ISeekYou.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\bin\Release\4.6 ISeekYou.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\bin\Release\4.6 ISeekYou.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\obj\Release\4.6 ISeekYou.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\obj\Release\4.6 ISeekYou.pdb

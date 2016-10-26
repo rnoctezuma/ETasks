@@ -1,0 +1,6 @@
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\bin\Debug\4.6 ISeekYou.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\bin\Debug\4.6 ISeekYou.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\bin\Debug\4.6 ISeekYou.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\obj\Debug\4.6 ISeekYou.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\obj\Debug\4.6 ISeekYou.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.6 ISeekYou\obj\Debug\4.6 ISeekYou.pdb

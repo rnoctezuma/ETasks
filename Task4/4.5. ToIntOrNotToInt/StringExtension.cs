@@ -12,7 +12,7 @@ namespace _4._5.ToIntOrNotToInt
 
         public static bool IsPositiveIntNumber(this string s)
         {
-            InitTable();
+            InitTable(); ////transitionTable.Count == 0
             string current = "S0";
             int countBeforeExp = 0;
             bool isNumber = false;

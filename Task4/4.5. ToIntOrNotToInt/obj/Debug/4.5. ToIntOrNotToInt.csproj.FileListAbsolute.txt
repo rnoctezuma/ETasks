@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\bin\Debug\_4._5.ToIntOrN
 D:\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\obj\Debug\4.5. ToIntOrNotToInt.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\obj\Debug\_4._5.ToIntOrNotToInt.exe
 D:\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\obj\Debug\_4._5.ToIntOrNotToInt.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\bin\Debug\_4._5.ToIntOrNotToInt.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\obj\Debug\_4._5.ToIntOrNotToInt.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\obj\Debug\_4._5.ToIntOrNotToInt.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\bin\Debug\_4._5.ToIntOrNotToInt.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\bin\Debug\_4._5.ToIntOrNotToInt.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Task4\4.5. ToIntOrNotToInt\obj\Debug\4.5. ToIntOrNotToInt.csprojResolveAssemblyReference.cache
