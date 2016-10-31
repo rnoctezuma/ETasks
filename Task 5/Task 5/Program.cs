@@ -4,219 +4,339 @@ using System.Globalization;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading;
-using System.Diagnostics;
-using System.Reflection;
-using System.Windows.Forms;
 
-public class Watcher
+namespace Task_5
 {
-    private static FileSystemWatcher watcher = new FileSystemWatcher(@"C:\Users\rnoctezuma\Desktop\ForTask5");
-    private static FileSystemWatcher dirWatcher = new FileSystemWatcher(@"C:\Users\rnoctezuma\Desktop\ForTask5");
-
-    private static void OnChanged(object source, FileSystemEventArgs e)
+    public class Watcher
     {
-        try
+        private static FileSystemWatcher watcher = new FileSystemWatcher(@"C:\Users\rnoctezuma\Desktop\ForTask5");
+        private static FileSystemWatcher dirWatcher = new FileSystemWatcher(@"C:\Users\rnoctezuma\Desktop\ForTask5");
+        private static DateTime lastRead = DateTime.MinValue;
+        private static string logPath;
+        private static string backupPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Backup");
+
+        private static void OnChanged(object source, FileSystemEventArgs e)
         {
-            watcher.EnableRaisingEvents = false;
-
-            string newHash = GetHashFromFile(e.FullPath);
-            Console.WriteLine("pomenal");
-
-            using (StreamWriter writer = new StreamWriter(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt", true))
+            bool notCompleted = true;
+            while (notCompleted)
             {
-                string logLine = e.ChangeType + "|" + e.FullPath + "|" + DateTime.UtcNow.AddHours(3) + "|" + newHash;
-                writer.WriteLine(logLine);
-            }
-
-            File.Copy(e.FullPath, Path.Combine(@"C:\Users\rnoctezuma\Desktop\Backup\", newHash), true);
-        }
-
-        finally
-        {
-            watcher.EnableRaisingEvents = true;
-        }
-    }
-    private static void OnCreated(object source, FileSystemEventArgs e)
-    {
-        // if (Path.GetFileName(e.FullPath) != String.Empty)
-        // {
-        //it's a directory.
-        string hash = GetHashFromFile(e.FullPath);
-
-        File.Copy(e.FullPath, Path.Combine(@"C:\Users\rnoctezuma\Desktop\Backup\", hash), true);
-        using (StreamWriter writer = new StreamWriter(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt", true))
-        {
-            writer.WriteLine($"{e.ChangeType}|{e.FullPath}|{DateTime.UtcNow.AddHours(3)}");
-        }
-        //  }
-    }
-
-    private static void OnDeleted(object source, FileSystemEventArgs e)
-    {
-        using (StreamWriter writer = new StreamWriter(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt", true))
-        {
-            writer.WriteLine($"{e.ChangeType}|{e.FullPath}|{DateTime.UtcNow.AddHours(3)}");
-        }
-    }
-
-    private static void OnRenamed(object source, RenamedEventArgs e)
-    {
-        if (source == watcher)
-        {
-            using (StreamWriter writer = new StreamWriter(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt", true))
-            {
-                string line = $"{e.ChangeType}|{e.OldFullPath}|{DateTime.UtcNow.AddHours(3)}|{e.FullPath}";
-                writer.WriteLine(line);
-            }
-        }
-        else
-        {
-            var files = Directory.GetFiles(e.FullPath, "*.txt*", SearchOption.AllDirectories);
-
-            using (StreamWriter writer = new StreamWriter(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt", true))
-            {
-                foreach (var item in files)
+                try
                 {
-                    string oldPath = e.OldFullPath + item.Remove(0, e.FullPath.Length);
-                    string line = $"{e.ChangeType}|{oldPath}|{DateTime.UtcNow}|{item}";
-                    writer.WriteLine(line);
+                    FileAttributes attributes = File.GetAttributes(e.FullPath);     ////////MUST HAVE
+                    if ((source == watcher) && !((attributes.HasFlag(FileAttributes.Directory))))
+                    {
+                        using (StreamWriter writer = new StreamWriter(logPath, true))
+                        {
+                            string newHash = GetHashFromFile(e.FullPath);
+                            writer.WriteLine($"{e.ChangeType}|{e.FullPath}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}|{newHash}");
+                            File.Copy(e.FullPath, Path.Combine(backupPath, newHash), true);
+                        }
+                    }
+                    notCompleted = false;
                 }
-                //        writer.WriteLine($"RenameDirectory|{e.OldFullPath}|{DateTime.UtcNow}|{e.FullPath}"); 
-            }
-        }
-    }
-
-
-    /*
-    private static bool IsChangedBefore(ref string oldHash, string path)
-    {
-        bool isChangedBefore = false;
-        using (StreamReader reader = new StreamReader(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt", System.Text.Encoding.Default))
-        {
-            string temp;
-            while ((temp = reader.ReadLine()) != null)
-            {
-                if (temp.Contains("Changed") && temp.Contains(path))
+                catch
                 {
-                    oldHash = temp.Split('|')[4];
-                    isChangedBefore = true;
+                    Thread.Sleep(1);
                 }
             }
         }
-        return isChangedBefore;
-    }*/
 
-    private static void BackUp()
-    {
-        using (StreamReader reader = new StreamReader(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt", System.Text.Encoding.Default))
+        private static void OnCreated(object source, FileSystemEventArgs e)
         {
-            string temp;
-            string[] line;
-            while ((temp = reader.ReadLine()) != null)
+            bool notCompleted = true;
+            while (notCompleted)
             {
-                line = temp.Split('|');
-                // if (line[0] == "Changed" && line[2] 
+                try
+                {
+                    FileAttributes attr = File.GetAttributes(e.FullPath);
+                    if ((source == watcher) && !(attr.HasFlag(FileAttributes.Directory)))
+                    {
+                        using (StreamWriter writer = new StreamWriter(logPath, true))
+                        {
+                            string hash = GetHashFromFile(e.FullPath);
+                            writer.WriteLine($"{e.ChangeType}|{e.FullPath}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}|{hash}");
+                            File.Copy(e.FullPath, Path.Combine(backupPath, hash), true);
+                        }
+                    }
+                    else
+                    {
+                        using (StreamWriter writer = new StreamWriter(logPath, true))
+                        {
+                            writer.WriteLine($"CreateDirectory|{e.FullPath}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}");
+                            var files = Directory.GetFiles(e.FullPath, "*.txt*", SearchOption.AllDirectories);
+                            for (int i = 0; i < files.Length; i++)
+                            {
+                                string hash = GetHashFromFile(files[i]);
+                                writer.WriteLine($"{e.ChangeType}|{files[i]}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}|{hash}");
+                                File.Copy(files[i], Path.Combine(backupPath, hash), true);
+                            }
+                        }
+                    }
+                    notCompleted = false;
+                }
+                catch
+                {
+                    Thread.Sleep(1);
+                }
             }
         }
-    }
 
-    private static string GetHashFromFile(string path)
-    {
-        string content = "";
-        using (StreamReader reader = new StreamReader(path, System.Text.Encoding.Default))
+        private static void OnDeleted(object source, FileSystemEventArgs e)
         {
-            content = reader.ReadToEnd();
-        }
-
-        System.Security.Cryptography.SHA256Managed crypt = new System.Security.Cryptography.SHA256Managed();
-        System.Text.StringBuilder hash = new System.Text.StringBuilder();
-        byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(content), 0, Encoding.UTF8.GetByteCount(content));
-        foreach (byte theByte in crypto)
-        {
-            hash.Append(theByte.ToString("x2"));
-        }
-        hash.Append(".txt");
-        return hash.ToString();
-    }
-    //Подготовка backup директория (создание копий файлов из репозитория по хэшу, создание log и hashlog файлов)
-    private static void PrepareBackupDir(string watchFolder)
-    {
-        string backupDir = @"C:\Users\rnoctezuma\Desktop\Backup";
-        if (Directory.Exists(backupDir))
-        {
-            DeleteBackupDir(backupDir);
-        }
-        Directory.CreateDirectory(backupDir);
-        File.Create(@"C:\Users\rnoctezuma\Desktop\Backup\log.txt").Close();
-        CopyFilesRecursively(new DirectoryInfo(watchFolder), new DirectoryInfo(backupDir));
-    }
-
-    //создание копий файлов из репозитория по хэшу в backup папке
-    private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target)
-    {
-
-        foreach (DirectoryInfo dir in source.GetDirectories())
-            CopyFilesRecursively(dir, target);
-        foreach (FileInfo file in source.GetFiles("*.txt"))
-        {
-            file.CopyTo(Path.Combine(target.FullName, GetHashFromFile(file.FullName)), true);
-        }
-    }
-
-    private static void DeleteBackupDir(string path)
-    {
-        Directory.Delete(path, true);
-    }
-
-    public static void Main()
-    {
-        //     var InvokerForm = new Form();
-        //   var dummy = InvokerForm.Handle; // force handle creation
-        // Application.Run(InvokerForm);
-        var InvokerForm = new Form();
-       var dummy = InvokerForm.Handle; // force handle creation
-                watcher.SynchronizingObject = InvokerForm;
-            Application.Run(InvokerForm);
-
-        Console.WriteLine("Press \'0\' to quit. Press \'1\' for watching. Press \'2\' for backup.");
-        int command = -1;
-        while (command != 0)
-        {
-            command = int.Parse(Console.ReadLine());
-            if (command == 1)
+            bool notCompleted = true;
+            while (notCompleted)
             {
-                Console.WriteLine("Watching folder...");
-                PrepareBackupDir(@"C:\Users\rnoctezuma\Desktop\ForTask5");
-
-                watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite | NotifyFilters.LastAccess;
-                watcher.Filter = "*.txt";
-                watcher.IncludeSubdirectories = true;
-                watcher.InternalBufferSize = 1024;
-
-                //Watcher for directories
-                dirWatcher.IncludeSubdirectories = true;
-                dirWatcher.NotifyFilter = NotifyFilters.DirectoryName;
-                dirWatcher.EnableRaisingEvents = true;
-
-            //    dirWatcher.Renamed += new RenamedEventHandler(OnRenamed);
-            //    dirWatcher.Deleted += new FileSystemEventHandler(OnDeleted);
-
-                watcher.Changed += new FileSystemEventHandler(OnChanged);
-                watcher.Created += new FileSystemEventHandler(OnCreated);
-                watcher.Deleted += new FileSystemEventHandler(OnDeleted);
-                watcher.Renamed += new RenamedEventHandler(OnRenamed);
-                // Begin watching.
-                watcher.EnableRaisingEvents = true;
-
+                try
+                {
+                    if (source == watcher)
+                    {
+                        using (StreamWriter writer = new StreamWriter(logPath, true))
+                        {
+                            writer.WriteLine($"{e.ChangeType}|{e.FullPath}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}");
+                        }
+                    }
+                    else
+                    {
+                        using (StreamWriter writer = new StreamWriter(logPath, true))
+                        {
+                            writer.WriteLine($"DeleteDirectory|{e.FullPath}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}");
+                        }
+                    }
+                    notCompleted = false;
+                }
+                catch
+                {
+                    Thread.Sleep(1);
+                }
             }
-            if (command == 2)
+        }
+
+        private static void OnRenamed(object source, RenamedEventArgs e)
+        {
+            bool notCompleted = true;
+            while (notCompleted)
             {
-                Console.WriteLine("Enter date for backup:");
-
-                BackUp();
+                try
+                {
+                    //  FileAttributes attr = File.GetAttributes(e.FullPath);
+                    if (source == watcher)// && !(attr.HasFlag(FileAttributes.Directory)))
+                    {
+                        using (StreamWriter writer = new StreamWriter(logPath, true))
+                        {
+                            writer.WriteLine($"{e.ChangeType}|{e.OldFullPath}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}|{e.FullPath}");
+                        }
+                    }
+                    else
+                    {
+                        using (StreamWriter writer = new StreamWriter(logPath, true))
+                        {
+                            writer.WriteLine($"RenameDirectory|{e.OldFullPath}|{DateTime.UtcNow.AddHours(3).ToString("dd/MM/yyyy/HH/mm/ss")}|{e.FullPath}");
+                        }
+                    }
+                    notCompleted = false;
+                }
+                catch
+                {
+                    Thread.Sleep(1);
+                }
             }
+        }
 
+        private static void BackUp(DateTime backupDate)
+        {
+            PrepareBackupDir.ClearWatchingDir();
+            string sourceDir = Path.Combine(backupPath, "SourceFolder");
+            PrepareBackupDir.FullCopy(new DirectoryInfo(sourceDir), new DirectoryInfo(@"C:\Users\rnoctezuma\Desktop\ForTask5"));
+
+            using (StreamReader reader = new StreamReader(logPath, System.Text.Encoding.Default))
+            {
+                string temp;
+                while ((temp = reader.ReadLine()) != null)
+                {
+                    string[] line = temp.Split('|');
+                    if (DateTime.ParseExact(line[2], "dd.MM.yyyy.HH.mm.ss", CultureInfo.InvariantCulture).CompareTo(backupDate) > 0)
+                    {
+                        break;
+                    }
+                    switch (line[0])
+                    {
+                        case "Created": case "Changed":
+                            File.Copy(Path.Combine(backupPath, line[3]), line[1], true);
+                            break;
+                        case "Renamed":
+                            File.Move(line[1], line[3]);
+                            break;
+                        case "Deleted":
+                            File.Delete(line[1]);
+                            break;
+                        case "CreateDirectory":
+                            Directory.CreateDirectory(line[1]);
+                            break;
+                        case "DeleteDirectory":
+                            Directory.Delete(line[1], true);
+                            break;
+                        case "RenameDirectory":
+                            Directory.Move(line[1], line[3]);
+                            break;
+                        default:
+                            throw new Exception("Something wrong with log");
+                    }
+                }
+            }
+            Console.WriteLine("Backup success");
+        }
+
+        public static string GetHashFromFile(string path)
+        {
+            string content = String.Empty;
+            using (StreamReader reader = new StreamReader(path, System.Text.Encoding.Default))
+            {
+                content = reader.ReadToEnd();
+            }
+            System.Security.Cryptography.SHA256Managed crypt = new System.Security.Cryptography.SHA256Managed();
+            StringBuilder hash = new StringBuilder();
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(content), 0, Encoding.UTF8.GetByteCount(content));
+            foreach (byte theByte in crypto)
+            {
+                hash.Append(theByte.ToString("x2"));
+            }
+            hash.Append(".txt");
+            return hash.ToString();
+        }
+
+        private static void CallBackup(string backupDate)
+        {
+            DateTime date;
+
+            if (DateTime.TryParseExact(backupDate, "dd/MM/yyyy/HH/mm/ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out date))
+            {
+                if (date.CompareTo(backupDateBarrier()[0]) >= 0 && date.CompareTo(backupDateBarrier()[1]) <= 0)
+                {
+                    BackUp(date);
+                }
+                else
+                {
+                    throw new ArgumentException($"Error: Backup date must be between {backupDateBarrier()[0]} and {backupDateBarrier()[1]}");
+                }
+            }
+            else
+            {
+                throw new ArgumentException("Error: Date has incorrect format");
+            }
+        }
+
+
+        private static DateTime [] backupDateBarrier()
+        {
+            DateTime[] firstLastDates = new DateTime[2];
+            string firstLogDate = String.Empty;
+            string lastLogDate = String.Empty;
+            using (StreamReader reader = new StreamReader(logPath, System.Text.Encoding.Default))
+            {
+                firstLogDate = reader.ReadLine();
+                lastLogDate = firstLogDate;
+
+                string temp;
+                while ((temp = reader.ReadLine()) != null)
+                {
+                    lastLogDate = temp;
+                }
+
+                if (firstLogDate != String.Empty)
+                {
+                    firstLastDates[0] = DateTime.ParseExact(firstLogDate.Split('|')[2], "dd.MM.yyyy.HH.mm.ss", CultureInfo.InvariantCulture);
+                    firstLastDates[1] = DateTime.ParseExact(lastLogDate.Split('|')[2], "dd.MM.yyyy.HH.mm.ss", CultureInfo.InvariantCulture);
+                    return firstLastDates;
+                }
+                else
+                {
+                    throw new Exception("Error: Log file empty!");
+                }
+            }
+        }
+
+        public static void Main()
+        {
+            
+            Console.WriteLine("Press \'0\' to quit. Press \'1\' for watching. Press \'2\' for backup.");
+            Console.WriteLine("----------------------------------------------------------------");
+            Console.Write("Enter command: ");
+            int command = -1;
+            while (command != 0)
+            {
+                // int command;
+                bool tryCommand = true;
+                while (tryCommand)
+                {
+                    bool result = Int32.TryParse(Console.ReadLine(), out command);
+                    if (result && command >= 0 && command <= 2)
+                    {
+                        tryCommand = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Try again...");
+                        Console.Write("Enter command: ");
+                    }
+                }
+
+                switch (command)
+                {
+                    case 1:
+                        {
+                            PrepareBackupDir.PrepareBackupDirectory(@"C:\Users\rnoctezuma\Desktop\ForTask5", out logPath);
+                            Console.WriteLine("Watching folder...");
+
+                            watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite | NotifyFilters.LastAccess;
+                            watcher.Filter = "*.txt";
+                            watcher.IncludeSubdirectories = true;
+                            watcher.InternalBufferSize = 1048576;
+
+                            //Watcher for directories
+                            dirWatcher.IncludeSubdirectories = true;
+                            dirWatcher.NotifyFilter = NotifyFilters.DirectoryName;
+                            dirWatcher.EnableRaisingEvents = true;
+                            watcher.EnableRaisingEvents = true;
+
+                            dirWatcher.Renamed += new RenamedEventHandler(OnRenamed);
+                            dirWatcher.Deleted += new FileSystemEventHandler(OnDeleted);
+                            dirWatcher.Created += new FileSystemEventHandler(OnCreated);
+                            dirWatcher.Changed += new FileSystemEventHandler(OnChanged);
+
+                            watcher.Changed += new FileSystemEventHandler(OnChanged);
+                            watcher.Created += new FileSystemEventHandler(OnCreated);
+                            watcher.Deleted += new FileSystemEventHandler(OnDeleted);
+                            watcher.Renamed += new RenamedEventHandler(OnRenamed);
+                            Console.Write("Enter command: ");
+                        }
+                        break;
+                    case 2:
+                        {
+                            try
+                            {
+                                dirWatcher.EnableRaisingEvents = false;
+                                watcher.EnableRaisingEvents = false;
+                                PrepareBackupDir.PrepareBackupDirectory(@"C:\Users\rnoctezuma\Desktop\ForTask5", out logPath);
+                                Console.WriteLine("----------------------------------------------------------------");
+                                Console.WriteLine($"Enter the date between {backupDateBarrier()[0]} and {backupDateBarrier()[1]}");
+                                Console.Write("Enter backup date (format - dd/MM/yyyy/HH/mm/ss): ");
+                                string backupDate = Console.ReadLine();
+                                CallBackup(backupDate);
+                                Console.Write("Enter command: ");
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                                Console.Write("Enter command: ");
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            } 
         }
     }
 }
+
 
