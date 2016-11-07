@@ -1,0 +1,13 @@
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\obj\Debug\Epam.UserInfo.Logic.csprojResolveAssemblyReference.cache
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.Logic.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.Logic.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.DalContracts.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.LogicContracts.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UsersInfo.Entities.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.DalContracts.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.LogicContracts.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UsersInfo.Entities.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\obj\Debug\Epam.UserInfo.Logic.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\obj\Debug\Epam.UserInfo.Logic.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.FileDal.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.Logic\bin\Debug\Epam.UserInfo.FileDal.pdb

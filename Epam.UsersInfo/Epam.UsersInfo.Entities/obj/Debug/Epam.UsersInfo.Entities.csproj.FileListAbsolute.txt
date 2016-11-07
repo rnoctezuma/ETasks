@@ -1,0 +1,5 @@
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.Entities\bin\Debug\Epam.UsersInfo.Entities.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.Entities\bin\Debug\Epam.UsersInfo.Entities.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.Entities\obj\Debug\Epam.UsersInfo.Entities.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.Entities\obj\Debug\Epam.UsersInfo.Entities.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.Entities\obj\Debug\Epam.UsersInfo.Entities.csprojResolveAssemblyReference.cache
