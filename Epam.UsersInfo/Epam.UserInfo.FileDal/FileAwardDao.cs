@@ -52,9 +52,29 @@ namespace Epam.UserInfo.FileDal
                 });
         }
 
+        public IEnumerable<Award> GetAwardsByIDs(int[] IDs)
+        {
+            var awards = File.ReadAllLines(fileName);
+            List<Award> suitableAwards = new List<Award>();
+            foreach (var award in awards)
+            {
+                var parts = award.Split('|');
+                if (IDs.Contains(int.Parse(parts[0])))
+                {
+                    suitableAwards.Add(new Award { Id = int.Parse(parts[0]), Title = parts[1] });
+                }
+            }
+            return suitableAwards.AsEnumerable<Award>();
+        }
+
         public Award GetById(int id)
         {
             return GetAll().FirstOrDefault(award => award.Id == id);
+        }
+
+        public bool Contains(int id)
+        {
+            return GetById(id) != null;
         }
     }
 }

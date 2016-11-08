@@ -14,5 +14,9 @@ namespace Epam.UserInfo.LogicContracts
         bool Save(string newUser);
 
         bool Delete(int id);
+
+        bool AddAwardToUser(int userID, int awardID);
+
+        int [] GetUserAwardsIDs(int id);
     }
 }

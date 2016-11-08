@@ -11,6 +11,10 @@ namespace Epam.UserInfo.LogicContracts
     {
         Award[] GetAll();
 
+        Award[] GetAwardsByIDs(int[] IDs);
+
         bool Save(string newAward);
+
+        int GetMaxId();
     }
 }

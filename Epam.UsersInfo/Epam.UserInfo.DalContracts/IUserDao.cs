@@ -13,6 +13,12 @@ namespace Epam.UserInfo.DalContracts
 
         IEnumerable<User> GetAll();
 
+        int [] GetUserAwardsIDs(int ID);
+
         bool Remove(int id);
+
+        bool AddUserAward(int userID, int awardID);
+
+        bool Contains(int id);
     }
 }

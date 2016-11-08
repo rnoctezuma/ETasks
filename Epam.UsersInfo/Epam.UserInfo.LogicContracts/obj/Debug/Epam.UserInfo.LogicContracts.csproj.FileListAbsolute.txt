@@ -5,3 +5,10 @@ D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\bin\Deb
 D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\obj\Debug\Epam.UserInfo.LogicContracts.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\obj\Debug\Epam.UserInfo.LogicContracts.dll
 D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\obj\Debug\Epam.UserInfo.LogicContracts.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\bin\Debug\Epam.UserInfo.LogicContracts.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\bin\Debug\Epam.UserInfo.LogicContracts.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\bin\Debug\Epam.UsersInfo.Entities.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\bin\Debug\Epam.UsersInfo.Entities.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\obj\Debug\Epam.UserInfo.LogicContracts.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\obj\Debug\Epam.UserInfo.LogicContracts.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.LogicContracts\obj\Debug\Epam.UserInfo.LogicContracts.pdb

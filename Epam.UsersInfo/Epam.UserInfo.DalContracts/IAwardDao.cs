@@ -12,5 +12,11 @@ namespace Epam.UserInfo.DalContracts
         bool Add(Award award);
 
         IEnumerable<Award> GetAll();
+
+        IEnumerable<Award> GetAwardsByIDs(int[] IDs);
+
+        int GetMaxId();
+
+        bool Contains(int id);
     }
 }
