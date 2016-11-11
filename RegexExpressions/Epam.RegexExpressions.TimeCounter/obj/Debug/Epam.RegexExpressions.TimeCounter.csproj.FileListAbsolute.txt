@@ -1,0 +1,5 @@
+D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\bin\Debug\Epam.RegexExpressions.TimeCounter.exe.config
+D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\bin\Debug\Epam.RegexExpressions.TimeCounter.exe
+D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\bin\Debug\Epam.RegexExpressions.TimeCounter.pdb
+D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\obj\Debug\Epam.RegexExpressions.TimeCounter.exe
+D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\obj\Debug\Epam.RegexExpressions.TimeCounter.pdb

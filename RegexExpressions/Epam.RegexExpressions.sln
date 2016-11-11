@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.RegexExpressions.DateExistance", "RegexExpressions\Epam.RegexExpressions.DateExistance.csproj", "{C96DAE99-CC45-45B5-9726-B582CA1458AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.RegexExpressions.HtmlReplacer", "Epam.RegexExpressions.HtmlReplacer\Epam.RegexExpressions.HtmlReplacer.csproj", "{967C959E-91ED-47FC-B8EF-3DAEA69B93A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.RegexExpressions.EmailFinder", "Epam.RegexExpressions.EmailFinder\Epam.RegexExpressions.EmailFinder.csproj", "{A4B80E96-29FA-4715-A451-FF239827A6BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.RegexExpressions.NumberValidator", "Epam.RegexExpressions.NumberValidator\Epam.RegexExpressions.NumberValidator.csproj", "{E62F9A43-56CF-459A-BE01-73845AE710CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.RegexExpressions.TimeCounter", "Epam.RegexExpressions.TimeCounter\Epam.RegexExpressions.TimeCounter.csproj", "{6A13F1FF-94D5-438D-A763-7522339D31FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C96DAE99-CC45-45B5-9726-B582CA1458AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96DAE99-CC45-45B5-9726-B582CA1458AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96DAE99-CC45-45B5-9726-B582CA1458AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96DAE99-CC45-45B5-9726-B582CA1458AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967C959E-91ED-47FC-B8EF-3DAEA69B93A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967C959E-91ED-47FC-B8EF-3DAEA69B93A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967C959E-91ED-47FC-B8EF-3DAEA69B93A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967C959E-91ED-47FC-B8EF-3DAEA69B93A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4B80E96-29FA-4715-A451-FF239827A6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B80E96-29FA-4715-A451-FF239827A6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B80E96-29FA-4715-A451-FF239827A6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B80E96-29FA-4715-A451-FF239827A6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E62F9A43-56CF-459A-BE01-73845AE710CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62F9A43-56CF-459A-BE01-73845AE710CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62F9A43-56CF-459A-BE01-73845AE710CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62F9A43-56CF-459A-BE01-73845AE710CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A13F1FF-94D5-438D-A763-7522339D31FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A13F1FF-94D5-438D-A763-7522339D31FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A13F1FF-94D5-438D-A763-7522339D31FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A13F1FF-94D5-438D-A763-7522339D31FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
