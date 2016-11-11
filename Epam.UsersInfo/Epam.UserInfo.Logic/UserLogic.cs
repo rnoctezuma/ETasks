@@ -13,15 +13,41 @@ namespace Epam.UserInfo.Logic
     public class UserLogic : IUserLogic
     {
         private IUserDao userDao;
+        private IAwardDao awardDao;
 
         public UserLogic()
         {
             userDao = DaoProvider.UserDao;
+            awardDao = DaoProvider.AwardDao;
         }
 
         public bool Delete(int id)
         {
+            if (id < 1)
+                throw new ArgumentException("ID can't be less than 1");
+            if (!userDao.Contains(id))
+                throw new ArgumentException("Can't find user with such ID");
             return userDao.Remove(id);
+        }
+
+        public bool AddAwardToUser(int userID, int awardID)
+        {
+            if (userID < 1 || awardID < 1)
+                throw new ArgumentException("ID can't be less than 1");
+            if (!userDao.Contains(userID))
+                throw new ArgumentException("Can't find user with such ID");
+            if (!awardDao.Contains(awardID))
+                throw new ArgumentException("Can't find award with such ID");
+            if (userDao.AddUserAward(userID, awardID))
+            {
+                return true;
+            }
+            throw new InvalidOperationException("on user's award saving");
+        }
+
+        public int [] GetUserAwardsIDs(int ID)
+        {
+            return userDao.GetUserAwardsIDs(ID);
         }
 
         public User[] GetAll()

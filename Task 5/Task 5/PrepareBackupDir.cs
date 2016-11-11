@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,28 +12,37 @@ namespace Task_5
     public static class PrepareBackupDir
     {
         //Подготовка backup директория
-        public static void PrepareBackupDirectory(string watchFolder, out string logPath)
+        public static void PrepareBackupDirectory()
         {
-            logPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Backup\\log.txt");
-            string backupDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Backup");
-            string sourceDir = Path.Combine(backupDir, "SourceFolder");
-            if (Directory.Exists(backupDir) && Directory.Exists(sourceDir))
+            if (Directory.Exists(Constants.backupPath) && Directory.Exists(Constants.backupPath))
             {
-                if (File.Exists(logPath))
+                if (File.Exists(Constants.logPath))
                 {
                     return;
                 }
                 else
                 {
-                    Directory.Delete(backupDir, true);
+                    Directory.Delete(Constants.backupPath, true);
                 }
             }
-            Directory.CreateDirectory(backupDir);
-            Thread.Sleep(10);
-            File.Create(logPath).Close();
-            HashCopy(new DirectoryInfo(watchFolder), new DirectoryInfo(backupDir));
-            Directory.CreateDirectory(sourceDir);
-            FullCopy(new DirectoryInfo(watchFolder), new DirectoryInfo(sourceDir));
+            Directory.CreateDirectory(Constants.backupPath);
+            while (true)
+            {
+                try
+                {
+                    File.Create(Constants.logPath).Close();
+                    break;
+                }
+                catch
+                {
+                    Thread.Sleep(TimeSpan.FromMilliseconds(1));
+                }
+            }
+
+            HashCopy(new DirectoryInfo(Constants.watchPath), new DirectoryInfo(Constants.backupPath));
+
+            Directory.CreateDirectory(Constants.sourcePath);
+            FullCopy(new DirectoryInfo(Constants.watchPath), new DirectoryInfo(Constants.sourcePath));
         }
 
         //создание копий файлов из репозитория по хэшу в backup папке
@@ -53,9 +63,9 @@ namespace Task_5
                 file.CopyTo(Path.Combine(target.FullName, file.Name));
         }
 
-        public static void ClearWatchingDir()
+        public static void ClearFolder(string path)
         {
-            DirectoryInfo watchFolder = new DirectoryInfo(@"C:\Users\rnoctezuma\Desktop\ForTask5");
+            DirectoryInfo watchFolder = new DirectoryInfo(path);
 
             foreach (FileInfo file in watchFolder.GetFiles())
             {

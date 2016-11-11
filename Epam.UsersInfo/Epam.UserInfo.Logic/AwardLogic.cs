@@ -23,6 +23,25 @@ namespace Epam.UserInfo.Logic
             return awardDao.GetAll().ToArray();
         }
 
+        public Award[] GetAwardsByIDs(int[] IDs)
+        {
+            if (IDs.Length==0)
+            {
+                Console.Write("None");
+            }
+            return awardDao.GetAwardsByIDs(IDs).ToArray();
+        }
+
+        public int GetMaxId()
+        {
+            return awardDao.GetMaxId();
+        }
+
+        public bool Contains(int id)
+        {
+            return awardDao.Contains(id);
+        }
+
         public bool Save(string newAward)
         {
             if (newAward.Contains('|'))

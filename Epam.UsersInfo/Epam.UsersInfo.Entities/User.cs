@@ -25,7 +25,5 @@ namespace Epam.UsersInfo.Entities
                 return age;
             }
         }
-
-        public int[] AwardsID { get; set; }
     }
 }
