@@ -38,7 +38,6 @@ namespace Epam.UserInfo.FileDal
         {
             if (!File.Exists(usersAwardsList))
             {
-                File.Create(usersAwardsList).Close();
                 File.WriteAllLines(usersAwardsList, new[] { $"{userID}|{awardID}" });
             }
             else
@@ -97,6 +96,10 @@ namespace Epam.UserInfo.FileDal
 
         public int [] GetUserAwardsIDs(int ID)
         {
+            if (!File.Exists(usersAwardsList))
+            {
+                File.Create(usersAwardsList).Close();
+            }
             using (StreamReader reader = new StreamReader(usersAwardsList, System.Text.Encoding.Default))
             {
                 string temp;
@@ -116,7 +119,6 @@ namespace Epam.UserInfo.FileDal
                 return userAwardsIDs.ToArray();
             }
         }
-    
 
         public User GetById(int id)
         {
@@ -134,7 +136,7 @@ namespace Epam.UserInfo.FileDal
             {
                 if (lines[i].Split('|')[0] == id.ToString())
                 {
-                    lines.RemoveAt(id - 1);
+                    lines.RemoveAt(i);
                     break;
                 }
             }

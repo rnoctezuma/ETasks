@@ -24,20 +24,31 @@ namespace Epam.UserInfo.Logic
         public bool Delete(int id)
         {
             if (id < 1)
+            {
                 throw new ArgumentException("ID can't be less than 1");
+            }
+
             if (!userDao.Contains(id))
+            {
                 throw new ArgumentException("Can't find user with such ID");
+            }
             return userDao.Remove(id);
         }
 
         public bool AddAwardToUser(int userID, int awardID)
         {
             if (userID < 1 || awardID < 1)
+            {
                 throw new ArgumentException("ID can't be less than 1");
+            }
             if (!userDao.Contains(userID))
+            {
                 throw new ArgumentException("Can't find user with such ID");
+            }
             if (!awardDao.Contains(awardID))
+            {
                 throw new ArgumentException("Can't find award with such ID");
+            }
             if (userDao.AddUserAward(userID, awardID))
             {
                 return true;
@@ -55,25 +66,27 @@ namespace Epam.UserInfo.Logic
             return userDao.GetAll().ToArray();
         }
 
-        public bool Save(string newUser)
+        public bool Save(User newUser)
         {
-            if (newUser.Where(ch => ch == '|').Count() > 1)
+            if (newUser.Name.Contains('|'))
+            {
                 throw new ArgumentException("User info can't contains symbol '|'");
-            var tempUser = newUser.Split('|');
+            }
 
-            DateTime dob = DateTime.ParseExact(tempUser[1], "dd/MM/yyyy", CultureInfo.CurrentCulture);
-            if (dob > DateTime.Today)
+            if (newUser.DateOfBirth > DateTime.Today)
             {
                 throw new ArgumentException("Date of Birth can't be above than current date");
             }
 
-            User user = new User { Name = tempUser[0], DateOfBirth = dob };
+            if (newUser.Age > 150)
+            {
+                throw new ArgumentException("User's age cant' be above than 150 years");
+            }
 
-            if (userDao.Add(user))
+            if (userDao.Add(newUser))
             {
                 return true;
             }
-
             throw new InvalidOperationException("Error on user saving");
         }
     }

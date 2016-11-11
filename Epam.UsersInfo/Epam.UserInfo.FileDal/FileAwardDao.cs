@@ -43,19 +43,27 @@ namespace Epam.UserInfo.FileDal
 
         public IEnumerable<Award> GetAll()
         {
-            return File.ReadAllLines(fileName)
-                .Select(s => s.Split('|'))
-                .Select(parts => new Award
-                {
-                    Id = int.Parse(parts[0]),
-                    Title = parts[1],
-                });
+            try
+            {
+                return File.ReadAllLines(fileName)
+                    .Select(s => s.Split('|'))
+                    .Select(parts => new Award
+                    {
+                        Id = int.Parse(parts[0]),
+                        Title = parts[1],
+                    });
+            }
+            catch
+            {
+                throw new InvalidOperationException("Create an award first");
+            }
         }
 
         public IEnumerable<Award> GetAwardsByIDs(int[] IDs)
         {
             var awards = File.ReadAllLines(fileName);
             List<Award> suitableAwards = new List<Award>();
+
             foreach (var award in awards)
             {
                 var parts = award.Split('|');
@@ -64,7 +72,8 @@ namespace Epam.UserInfo.FileDal
                     suitableAwards.Add(new Award { Id = int.Parse(parts[0]), Title = parts[1] });
                 }
             }
-            return suitableAwards.AsEnumerable<Award>();
+
+            return suitableAwards;
         }
 
         public Award GetById(int id)

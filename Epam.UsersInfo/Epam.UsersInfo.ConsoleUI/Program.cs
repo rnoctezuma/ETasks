@@ -14,7 +14,7 @@ namespace Epam.UsersInfo.ConsoleUI
     {
         private static IUserLogic userLogic;
         private static IAwardLogic awardLogic;
-        private static readonly string stringFormat = "dd/MM/yyyy";
+        private static readonly string dateFormat = "dd/MM/yyyy";
 
         static Program()
         {
@@ -22,19 +22,24 @@ namespace Epam.UsersInfo.ConsoleUI
             awardLogic = new AwardLogic();
         }
 
-        private static string EnterUser()
+        private static User EnterUser()
         {
             Console.Write("Enter name: ");
             string name = Console.ReadLine();
             if (name == String.Empty || name == null)
                 throw new ArgumentException("Name can't be null or empty", nameof(name));
 
-            Console.Write("Enter date of birth (format - {0}): ", stringFormat);
+            Console.Write("Enter date of birth (format - {0}): ", dateFormat);
             string dateOfBirth = Console.ReadLine();
-            DateTime teempDate;
-            if (!DateTime.TryParseExact(dateOfBirth, stringFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out teempDate))
+            DateTime tempDate;
+            if (DateTime.TryParseExact(dateOfBirth, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out tempDate))
+            {
+                return new User { Name = name, DateOfBirth = tempDate };
+            }
+            else
+            {
                 throw new ArgumentException("Date incorrect");
-            return $"{name}|{dateOfBirth}";
+            }
         }
 
         private static void AddUser()
@@ -100,7 +105,7 @@ namespace Epam.UsersInfo.ConsoleUI
             string title = Console.ReadLine();
             if (title == String.Empty || title == null)
                 throw new ArgumentException("Name can't be null or empty", nameof(title));
-            awardLogic.Save(title);
+            awardLogic.Save(new Award { Title = title });
             Console.Write("Press any button to continue...");
             Console.ReadLine();
         }

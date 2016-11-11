@@ -11,7 +11,7 @@ namespace Epam.UserInfo.LogicContracts
     {
         User[] GetAll();
 
-        bool Save(string newUser);
+        bool Save(User newUser);
 
         bool Delete(int id);
 

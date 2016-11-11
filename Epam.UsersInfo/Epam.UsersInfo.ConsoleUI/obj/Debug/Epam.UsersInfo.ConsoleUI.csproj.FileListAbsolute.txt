@@ -30,3 +30,4 @@ C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.Cons
 C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.ConsoleUI\bin\Debug\Epam.UsersInfo.Entities.pdb
 C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.ConsoleUI\bin\Debug\Epam.UserInfo.DalContracts.pdb
 C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.ConsoleUI\bin\Debug\Epam.UserInfo.FileDal.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UsersInfo.ConsoleUI\bin\Debug\App.config

@@ -28,28 +28,23 @@ namespace Epam.UserInfo.Logic
             if (IDs.Length==0)
             {
                 Console.Write("None");
+                return new Award[0];
             }
+
             return awardDao.GetAwardsByIDs(IDs).ToArray();
         }
-
+        
         public int GetMaxId()
         {
             return awardDao.GetMaxId();
         }
 
-        public bool Contains(int id)
+        public bool Save(Award newAward)
         {
-            return awardDao.Contains(id);
-        }
-
-        public bool Save(string newAward)
-        {
-            if (newAward.Contains('|'))
+            if (newAward.Title.Contains('|'))
                 throw new ArgumentException("Award info can't contains symbol '|'");
 
-            Award award = new Award { Title = newAward };
-
-            if (awardDao.Add(award))
+            if (awardDao.Add(newAward))
             {
                 return true;
             }
