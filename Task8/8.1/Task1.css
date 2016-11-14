@@ -1,0 +1,23 @@
+p {
+    font-size: 1.4em;
+    color: #880000;
+}
+
+li {
+    margin: 10px 0px;
+}
+
+div.menu {
+    width: 200px;
+    background: #f9e497;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px double black;
+}
+
+.menu {
+    -webkit-box-shadow: 6px 6px 0px 1px rgba(136, 0, 0, 1);
+    -moz-box-shadow: 6px 6px 0px 1px rgba(136, 0, 0, 1);
+    box-shadow: 6px 6px 0px 1px rgba(136, 0, 0, 1);
+}

@@ -1,0 +1,45 @@
+.form {
+    background-color: #0690cf;
+    width: 500px;
+    margin: 20px;
+    border: 7px solid #0075b2;
+}
+
+.line-block {
+    float: left;
+    margin: 0px 12px 0px 0px;
+}
+
+.email-div {
+    padding: 12px;
+}
+
+.password-div {
+    width: 100%;
+    clear: both;
+    padding: 0px 0px 0px 12px;
+}
+
+.email-area {
+    width: 80%;
+    height: 20px;
+    margin: 7px 0px 0px 0px;
+}
+
+.password {
+    height: 20px;
+    width: 181px;
+    margin: 7px 0px 0px 0px;
+}
+
+p {
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #ffffff;
+    padding: 12px;
+    border-bottom: 2px solid #ffffff;
+}
