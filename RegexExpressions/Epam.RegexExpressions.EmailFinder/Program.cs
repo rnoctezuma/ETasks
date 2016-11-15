@@ -11,8 +11,8 @@ namespace Epam.RegexExpressions.EmailFinder
     {
         private static void Main(string[] args)
         {
-            Regex regex = new Regex(@"(?:[^\W_][\w-\.]*[^\W_]|[^\W_])@[^\W_]+\.[^\W\d_]{2,6}");
-            string text = "f_gh@yefgh.rtytrybrrtrtertbe@yandex.cc_g@hr.еgh";
+            Regex regex = new Regex(@"\b[^\W_](?:[\w-\.]*[^\W_])?@[^\W_](?:[\w-\.]*[^\W_])?\.[^\W\d_]{2,6}\b");
+            string text = "f_gh@saratov.yefgh.rt ytrybrrtrtertbe@yandex.cc_g@hr.еgh";
 
             MatchCollection matches = regex.Matches(text);
             Console.WriteLine("List of e-mails: ");

@@ -3,3 +3,6 @@ D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.HtmlReplacer
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.HtmlReplacer\bin\Debug\Epam.RegexExpressions.HtmlReplacer.pdb
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.HtmlReplacer\obj\Debug\Epam.RegexExpressions.HtmlReplacer.exe
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.HtmlReplacer\obj\Debug\Epam.RegexExpressions.HtmlReplacer.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.HtmlReplacer\bin\Debug\Epam.RegexExpressions.HtmlReplacer.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.HtmlReplacer\obj\Debug\Epam.RegexExpressions.HtmlReplacer.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.HtmlReplacer\obj\Debug\Epam.RegexExpressions.HtmlReplacer.pdb

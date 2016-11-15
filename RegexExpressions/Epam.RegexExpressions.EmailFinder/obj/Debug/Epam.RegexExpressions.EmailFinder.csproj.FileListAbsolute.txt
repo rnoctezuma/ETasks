@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\obj\Debug\Epam.RegexExpressions.EmailFinder.exe
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\obj\Debug\Epam.RegexExpressions.EmailFinder.pdb
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\obj\Debug\Epam.RegexExpressions.EmailFinder.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\bin\Debug\Epam.RegexExpressions.EmailFinder.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\obj\Debug\Epam.RegexExpressions.EmailFinder.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\obj\Debug\Epam.RegexExpressions.EmailFinder.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\bin\Debug\Epam.RegexExpressions.EmailFinder.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\bin\Debug\Epam.RegexExpressions.EmailFinder.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.EmailFinder\obj\Debug\Epam.RegexExpressions.EmailFinder.csprojResolveAssemblyReference.cache

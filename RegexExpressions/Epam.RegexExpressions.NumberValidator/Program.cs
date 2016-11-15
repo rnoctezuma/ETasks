@@ -11,15 +11,14 @@ namespace Epam.RegexExpressions.NumberValidator
     {
         private static void Main(string[] args)
         {
-            Regex normalNotation = new Regex(@"(?:-|\+)?\d+(?:\.d+)?");
-            Regex scientificNotation = new Regex(@"(?:-|\+)?\d+\.\d+e(?:-|\+)?\d+");
+            Regex normalNotation = new Regex(@"^[-\+]?\d+\.?\d+$");
+            Regex scientificNotation = new Regex(@"^[-\+]?\d(?:\.\d+)?e[-\+]?\d+$");
 
-            string text = "1.3e+1";
+            string text = "2.3e+1";
 
             MatchCollection matchesNormalNotation = normalNotation.Matches(text);
             MatchCollection matchesScientificNotation = scientificNotation.Matches(text);
 
-            Console.WriteLine(matchesScientificNotation.Count);
             if (matchesNormalNotation.Count != 0)
             {
                 Console.WriteLine($"{text} - number in normal notation");

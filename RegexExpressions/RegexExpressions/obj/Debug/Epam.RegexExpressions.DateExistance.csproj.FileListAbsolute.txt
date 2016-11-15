@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\bin\Debug\RegexEx
 D:\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\obj\Debug\Epam.RegexExpressions.DateExistance.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\obj\Debug\RegexExpressions.exe
 D:\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\obj\Debug\RegexExpressions.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\bin\Debug\RegexExpressions.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\obj\Debug\RegexExpressions.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\obj\Debug\RegexExpressions.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\bin\Debug\RegexExpressions.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\bin\Debug\RegexExpressions.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\RegexExpressions\obj\Debug\Epam.RegexExpressions.DateExistance.csprojResolveAssemblyReference.cache

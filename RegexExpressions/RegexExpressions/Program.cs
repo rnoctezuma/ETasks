@@ -11,9 +11,9 @@ namespace RegexExpressions
     {
         private static void Main(string[] args)
         {
-            Regex regex = new Regex(@"(((?:0[1-9]|1[0-9]|2[0-8])-(?:0[1-9]|1[0-2]))|((?:29|30|31)-(?:0[13578]|1[02]))|((?:29|30)-(?:0[469]|11))|((?:28|29)-02))-(?:[0-9]){4}");
+            Regex regex = new Regex(@"\b(((?:0[1-9]|1[0-9]|2[0-9])-(?:0[1-9]|1[0-2]))|((?:30|31)-(?:0[13578]|1[02]))|((?:30)-(?:0[469]|11)))-(?:[0-9]){4}\b");
 
-            string text = "tfe331-01-1996346паикецуbretg";
+            string text = "tfe3 31-01-1996 346паикецуbretg";
 
             MatchCollection matches = regex.Matches(text);
 

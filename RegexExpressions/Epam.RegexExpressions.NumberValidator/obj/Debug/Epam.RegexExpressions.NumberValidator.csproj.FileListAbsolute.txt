@@ -4,3 +4,9 @@ D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValida
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\obj\Debug\Epam.RegexExpressions.NumberValidator.csprojResolveAssemblyReference.cache
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\obj\Debug\Epam.RegexExpressions.NumberValidator.exe
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\obj\Debug\Epam.RegexExpressions.NumberValidator.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\bin\Debug\Epam.RegexExpressions.NumberValidator.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\obj\Debug\Epam.RegexExpressions.NumberValidator.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\obj\Debug\Epam.RegexExpressions.NumberValidator.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\bin\Debug\Epam.RegexExpressions.NumberValidator.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\bin\Debug\Epam.RegexExpressions.NumberValidator.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.NumberValidator\obj\Debug\Epam.RegexExpressions.NumberValidator.csprojResolveAssemblyReference.cache

@@ -3,3 +3,6 @@ D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\bin\Debug\Epam.RegexExpressions.TimeCounter.pdb
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\obj\Debug\Epam.RegexExpressions.TimeCounter.exe
 D:\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\obj\Debug\Epam.RegexExpressions.TimeCounter.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\bin\Debug\Epam.RegexExpressions.TimeCounter.exe.config
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\obj\Debug\Epam.RegexExpressions.TimeCounter.exe
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\RegexExpressions\Epam.RegexExpressions.TimeCounter\obj\Debug\Epam.RegexExpressions.TimeCounter.pdb
