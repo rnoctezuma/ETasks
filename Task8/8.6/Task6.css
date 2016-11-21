@@ -1,0 +1,51 @@
+body {
+    background: #333;
+}
+
+.equalizer li {
+    background: repeating-linear-gradient(to bottom, transparent, transparent 20px, #333 20px, #333 23px), linear-gradient(to bottom, #ffd059, #ff8c00);
+    width: 40px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.one-rows-block {
+    height: 23px;
+}
+
+.two-rows-block {
+    height: 44px;
+}
+
+.three-rows-block {
+    height: 67px;
+}
+
+.four-rows-block {
+    height: 90px;
+}
+
+.five-rows-block {
+    height: 113px;
+}
+
+.six-rows-block {
+    height: 136px;
+}
+
+.seven-rows-block {
+    height: 159px;
+}
+
+.eight-rows-block {
+    height: 182px;
+}
+
+.nine-rows-block {
+    height: 205px;
+}
+
+.ten-rows-block {
+    height: 228px;
+}

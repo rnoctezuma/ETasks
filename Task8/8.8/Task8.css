@@ -1,0 +1,41 @@
+body {
+    margin: 10px;
+    background-color: #000;
+}
+
+.container {
+    width: 400px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 0px 0px 9px 9px;
+    background: linear-gradient(to bottom, #fff 0%, #ddd 100%);
+    position: relative;
+    font: 0.9em/1.5 Arial;
+    line-height: 1.25em;
+}
+
+.container article {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.container header {
+    width: 110px;
+    height: 38px;
+    border: 1px solid black;
+    transform: skewX(-30deg);
+    position: absolute;
+    left: -15px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font: bold 20pt Arial;
+    color: #ffb262;
+}
+
+.container span {
+    display: inline-block;
+    transform: skewX(30deg);
+    line-height: 37px;
+    margin-left: 12px;
+}

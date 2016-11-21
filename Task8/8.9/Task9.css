@@ -1,0 +1,58 @@
+.step-menu label {
+    margin-right: -9px;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.step-menu input {
+    display: none;
+}
+
+.top,
+.bottom {
+    position: absolute;
+    left: 5px;
+    height: 15px;
+    width: 90px;
+    z-index: -1;
+}
+
+.top {
+    top: 0;
+    transform: skewX(20deg);
+    background: linear-gradient(to bottom, #ccc 40%, #aaa 100%);
+}
+
+.bottom {
+    top: 50%;
+    transform: skewX(-20deg);
+    background: linear-gradient(to bottom, #aaa 0%, #ccc 60%);
+}
+
+.step-menu input:checked+span+.top {
+    background: linear-gradient(to bottom, rgb(106, 211, 80) 40%, rgb(72, 181, 45) 100%);
+}
+
+.step-menu input:checked+span+.top+.bottom {
+    background: linear-gradient(to bottom, rgb(72, 181, 45) 0%, rgb(106, 211, 80) 60%);
+}
+
+.step-menu label:first-child .top,
+.step-menu label:first-child .bottom {
+    left: -5px;
+    width: 100px;
+}
+
+.step-menu label:last-child .top,
+.step-menu label:last-child .bottom {
+    width: 100px;
+}
+
+.step-menu input:checked+span {
+    color: #fff;
+}

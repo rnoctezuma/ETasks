@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+}
+
+.triangle-block {
+    width: 98%;
+    margin: 150px auto;
+    background-color: #88b7d5;
+    text-align: center;
+    padding: 20px 0;
+    border: 5px solid #c2e1f5;
+    color: #fff;
+    position: relative;
+}
+
+.triangle-block::before,
+.triangle-block::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.triangle-block::before {
+    border: 30px solid transparent;
+    border-bottom: 30px solid #c2e1f5;
+}
+
+.triangle-block::after {
+    border: 23px solid transparent;
+    border-bottom: 23px solid #88b7d5;
+}

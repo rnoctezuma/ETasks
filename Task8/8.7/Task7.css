@@ -1,0 +1,15 @@
+.infoblock>header {
+    background: #008b66;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: -7px;
+    font-size: 1.1em;
+}
+
+.infoblock>article {
+    margin-left: 30px;
+    background: #dfe6e1;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-right: none;
+}
