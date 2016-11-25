@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.form {
+    padding: 10px;
+    position: relative;
+}
+
+.form ul {
+    position: absolute;
+    padding-bottom: 10px;
+}
+
+.leftList {
+    width: 160px;
+}
+
+.rightList {
+    width: 160px;
+    margin-left: 44px;
+}
+
+.buttons li input {
+    width: 40px;
+}
