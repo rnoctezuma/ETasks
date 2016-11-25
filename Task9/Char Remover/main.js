@@ -1,13 +1,19 @@
 ﻿var separators = ['.', ' ', '?', '\t', ',', ':', '!'];
+
 function editLine() {
     var sourceLine;
     sourceLine = document.getElementById("text_input").value;
-    temp(sourceLine + " ");
-    // alert(sourceLine);
+    alert(removeChars(sourceLine + " "));
 }
 
-function temp(s) {
-    getCharsToRemove(stringSplit(s));
+function removeChars(sourceString) {
+    var charsToRemove = getCharsToRemove(stringSplit(sourceString)),
+        i = 0,
+        j = 0;
+    for (i; i < charsToRemove.length; i++) {
+        sourceString = sourceString.split(charsToRemove[i]).join('');
+    }
+    return sourceString;
 }
 
 function stringSplit(stringToSplit) {
@@ -25,8 +31,7 @@ function stringSplit(stringToSplit) {
                 i++;
                 if (separators.indexOf(stringToSplit[i]) === -1) {
                     endWordIndex++;
-                }
-                else {
+                } else {
                     arrayWords.push(stringToSplit.slice(startWordIndex, endWordIndex + 1));
                     break;
                 }
@@ -51,8 +56,5 @@ function getCharsToRemove(arrayWords) {
             }
         }
     }
-
-    for (i = 0; i < charsToRemove.length; i++) {
-        alert(charsToRemove[i]);
-    }
+    return charsToRemove;
 }

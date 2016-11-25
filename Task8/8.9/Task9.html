@@ -1,39 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <title></title>
-    <meta charset='utf-8'>
-    <link rel="stylesheet" type="text/css" href="Task9.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Task9.css">
+    <title>Steps</title>
 </head>
 
 <body>
-    <div class="step-menu">
-        <label>
-            <input type="radio" name="choice">
-            <span>Шаг 1</span>
-            <div class="top"></div>
-            <div class="bottom"></div>
-        </label>
-        <label>
-            <input type="radio" name="choice" checked>
-            <span>Шаг 2</span>
-            <div class="top"></div>
-            <div class="bottom"></div>
-        </label>
-        <label>
-            <input type="radio" name="choice">
-            <span>Шаг 3</span>
-            <div class="top"></div>
-            <div class="bottom"></div>
-        </label>
-        <label>
-            <input type="radio" name="choice">
-            <span>Шаг 4</span>
-            <div class="top"></div>
-            <div class="bottom"></div>
-    </label>
-    </div>
+    <form>
+        <label class="step">
+			<input type="radio" name="step">
+			<span class="item">Шаг 1</span>
+		</label>
+        <label class="step pressed">
+			<input type="radio" name="step">
+			<span class="item">Шаг 2</span>
+		</label>
+        <label class="step">
+			<input type="radio" name="step">
+			<span class="item">Шаг 3</span>
+		</label>
+        <label class="step">
+			<input type="radio" name="step">
+			<span class="item">Шаг 4</span>
+		</label>
+    </form>
 </body>
 
 </html>
