@@ -1,0 +1,32 @@
+﻿@using Epam.UserInfo.Logic;
+@using Epam.UserInfo.LogicContracts;
+@{
+    Layout = "~/_Layout.cshtml";
+    IUserLogic accountLogic = new UserLogic();
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>DateOfBirth</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in accountLogic.GetAll())
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.DateOfBirth.ToShortDateString()</td>
+                        <td>@user.Age</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

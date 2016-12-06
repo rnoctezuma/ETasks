@@ -30,7 +30,7 @@ function moveRight(e) {
     var rightList = e.target.closest(".form").querySelector('.rightList');
 
     for (j = 0; j < leftList.options.length; j++) {
-        if (leftList.options[j].selected == true) {
+        if (leftList.options[j].selected) {
             rightList.appendChild(leftList.options[j]);
             j--;
         }
@@ -58,7 +58,7 @@ function moveLeft(e) {
     var leftList = e.target.closest(".form").querySelector('.leftList');
 
     for (var j = 0; j < rightList.options.length; j++) {
-        if (rightList.options[j].selected == true) {
+        if (rightList.options[j].selected) {
             leftList.appendChild(rightList.options[j]);
             j--;
         }

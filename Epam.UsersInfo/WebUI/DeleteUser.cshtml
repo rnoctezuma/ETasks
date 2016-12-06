@@ -1,0 +1,43 @@
+﻿@using Epam.UserInfo.Logic;
+@using Epam.UserInfo.LogicContracts;
+@{
+    Layout = "~/_Layout.cshtml";
+    bool failed = false;
+    if (IsPost)
+    {
+        IUserLogic userLogic = new UserLogic();
+        var Id = Request["deleteId"];
+        int result;
+        if (int.TryParse(Id, out result))
+        {
+            try
+            {
+                userLogic.Delete(result);
+                Response.Redirect("~/ShowUsers");
+            }
+            catch (Exception ex)
+            {
+            <div class="alert alert-danger" style="margin-top: 60px">
+                @ex.Message
+            </div>
+                }
+            }
+            else
+            {
+                failed = true;
+            }
+        } 
+    }
+@if (failed)
+{
+    <div class="alert alert-danger" style="margin-top: 60px">
+        Id is not correct
+    </div>
+}
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="deleteId">ID</label>
+        <input type="text" class="form-control" id="deleteId" name="deleteId" placeholder="Enter Id">
+    </div>
+    <button type="submit" class="btn btn-danger"> Delete user</button>
+</form>

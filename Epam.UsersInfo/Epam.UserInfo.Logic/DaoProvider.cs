@@ -18,9 +18,16 @@ namespace Epam.UserInfo.Logic
                 UserDao = new FileUserDao();
                 AwardDao = new FileAwardDao();
             }
+            if (ConfigurationManager.AppSettings["DaoMode"] == "DB")
+            {
+                UserDao = new DBUserDao();
+                AwardDao = new DBAwardDao();
+                AccountDao = new DBAccountDao();
+            }
         }
 
         public static IUserDao UserDao { get; }
         public static IAwardDao AwardDao { get; }
+        public static IAccountDao AccountDao { get; }
     }
 }

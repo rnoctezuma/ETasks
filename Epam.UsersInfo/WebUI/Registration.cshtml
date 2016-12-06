@@ -1,0 +1,86 @@
+﻿@using Epam.UserInfo.Logic;
+@using Epam.UserInfo.LogicContracts; 
+@using Epam.UsersInfo.Entities;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @{
+        IAccountLogic accountLogic = new AccountLogic();
+        bool loginError = false;
+        bool passwordConfimError = false;
+
+    }
+    @if (IsPost)
+    {
+        var login = Request["login"];
+        var password = Request["password"];
+        var confirmPassword = Request["confirmPassword"];
+
+        if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password) ||
+            string.IsNullOrWhiteSpace(confirmPassword))
+        {
+            Response.SetStatus(HttpStatusCode.BadRequest);
+            return;
+        }
+
+        if (!password.Equals(confirmPassword))
+        {
+            passwordConfimError = true;
+        }
+        else if (accountLogic.CanRegister(login))
+        {
+            accountLogic.Add(new Account(login, password));
+            var returnUrl = Request["ReturnUrl"];
+            if (string.IsNullOrWhiteSpace(returnUrl))
+            {
+                returnUrl = "~";
+            }
+            Response.Redirect(returnUrl);
+            return;
+        }
+        else
+        {
+            loginError = true;
+        }
+    }
+
+    <div class="container">
+       @if (loginError)
+           {
+                <div class="alert alert-danger" style="margin-top: 60px">
+                    Login is already used
+                </div>
+           }
+           else if (passwordConfimError)
+           {
+                <div class="alert alert-danger" style="margin-top: 60px">
+                    Passwords do not match
+                </div>
+           }
+        
+        <form class="form-group form-login" action="~/Registration" method="post" role="form">
+            <div class="form-group">
+                <label class="control-label" for="login">Login</label>
+                <input type="text" autocomplete="off" class="form-control" id="login" name="login" placeholder="Enter login" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="password">Password</label>
+                <input type="password" autocomplete="off" class="form-control" id="password" name="password" placeholder="Enter password" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="confirmPassword">Confirm password</label>
+                <input type="password" autocomplete="off" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Enter password again" />
+            </div>
+            <button type="submit" class="btn btn-success">Registration</button>
+        </form>
+    </div>
+
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

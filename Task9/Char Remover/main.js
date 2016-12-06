@@ -9,10 +9,12 @@ function editLine() {
 function removeChars(sourceString) {
     var charsToRemove = getCharsToRemove(stringSplit(sourceString)),
         i = 0,
-        j = 0;
-    for (i; i < charsToRemove.length; i++) {
-        sourceString = sourceString.split(charsToRemove[i]).join('');
-    }
+        j = 0,
+        for (i; i < charsToRemove.length; i++) {
+            while (sourceString.indexOf(charsToRemove[i]) !== -1) {
+                sourceString = sourceString.replace(charsToRemove[i], '');
+            }
+        }
     return sourceString;
 }
 

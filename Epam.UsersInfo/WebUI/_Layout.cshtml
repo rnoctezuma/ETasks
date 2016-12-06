@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/include/Styles.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!— Collect the nav links, forms, and other content for toggling —>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/AddUser">Add</a></li>
+                            <li><a href="~/ShowUsers">Show all</a></li>
+                            <li><a href="~/DeleteUser">Remove</a></li>
+                            <li><a href="~/CheckForEdit">Edit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Awards <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Add</a></li>
+                            <li><a href="#">Show all</a></li>
+                            <li><a href="#">Remove</a></li>
+                            <li><a href="#">Edit</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <h4>User: @User.Identity.Name <a href="~/Index.cshtml">Sign out</a></h4>
+                        }
+                        else
+                        { <h4>Guest. <a href="~/Login.cshtml">Sign in</a></h4> }
+
+                    </li>
+                </ul>
+            </div><!— /.navbar-collapse —>
+        </div><!— /.container-fluid —>
+    </nav>
+    @RenderBody()
+        </div>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/include/Scripts.js"></script>
+</body>
+</html>

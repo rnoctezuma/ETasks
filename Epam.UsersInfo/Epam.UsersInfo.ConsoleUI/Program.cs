@@ -140,6 +140,7 @@ namespace Epam.UsersInfo.ConsoleUI
 
         private static void Main(string[] args)
         {
+
             while (true)
             {
                 Console.Clear();
