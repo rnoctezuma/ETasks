@@ -20,6 +20,7 @@ namespace Epam.UserInfo.Logic
 
         public void Add(Account account)
         {
+            account.Password = GetPasswordsHash(account.Password);
             accountDao.Add(account);
         }
 
@@ -30,12 +31,26 @@ namespace Epam.UserInfo.Logic
 
         public bool CanLogin(string login, string password)
         {
-            return accountDao.CheckUser(login, password);
+            return accountDao.CheckUser(login, GetPasswordsHash(password));
         }
 
         public string GetUsersRole(string login)
         {
             return accountDao.GetRole(login);
+        }
+
+        private static string GetPasswordsHash(string input)
+        {
+            var bytes = System.Text.Encoding.UTF8.GetBytes(input);
+            using (var hash = System.Security.Cryptography.SHA512.Create())
+            {
+                var hashedInputBytes = hash.ComputeHash(bytes);
+
+                var hashedInputStringBuilder = new System.Text.StringBuilder(128);
+                foreach (var b in hashedInputBytes)
+                    hashedInputStringBuilder.Append(b.ToString("X2"));
+                return hashedInputStringBuilder.ToString();
+            }
         }
     }
 }

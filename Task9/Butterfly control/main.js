@@ -19,61 +19,50 @@
     for (var i = 0; i < moveAllLeftElems.length; i++) {
         moveAllLeftElems[i].addEventListener('click', moveLeftAll);
     }
+
+    function move(target, destination, source) {
+        var sourceList = target.closest(".form").querySelector(source),
+            destinationList = target.closest(".form").querySelector(destination),
+            j;
+
+        if (sourceList.options.selectedIndex == -1) {
+            alert("Nothing selected");
+        }
+
+        for (j = 0; j < sourceList.options.length; j++) {
+            if (sourceList.options[j].selected) {
+                destinationList.appendChild(sourceList.options[j]);
+                j--;
+            }
+        }
+        destinationList.selectedIndex = -1;
+    }
+
+    function moveAll(target, destination, source) {
+        var sourceList = target.closest(".form").querySelector(source),
+            destinationList = target.closest(".form").querySelector(destination),
+            j;
+
+        for (j = 0; j < sourceList.options.length; j++) {
+            destinationList.appendChild(sourceList.options[j]);
+            j--;
+        }
+        destinationList.selectedIndex = -1;
+    }
+
+    function moveRight(e) {
+        move(e.target, '.rightList', '.leftList');
+    }
+
+    function moveLeft(e) {
+        move(e.target, '.leftList', '.rightList');
+    }
+
+    function moveRightAll(e) {
+        moveAll(e.target, '.rightList', '.leftList');
+    }
+
+    function moveLeftAll(e) {
+        moveAll(e.target, '.leftList', '.rightList');
+    }
 }());
-
-function moveRight(e) {
-    var leftList = e.target.closest(".form").querySelector('.leftList'),
-        j;
-    if (leftList.options.selectedIndex == -1) {
-        alert("Nothing selected");
-    }
-    var rightList = e.target.closest(".form").querySelector('.rightList');
-
-    for (j = 0; j < leftList.options.length; j++) {
-        if (leftList.options[j].selected) {
-            rightList.appendChild(leftList.options[j]);
-            j--;
-        }
-    }
-    rightList.selectedIndex = -1;
-}
-
-function moveRightAll(e) {
-    var leftList = e.target.closest(".form").querySelector('.leftList'),
-        rightList = e.target.closest(".form").querySelector('.rightList'),
-        j;
-
-    for (j = 0; j < leftList.options.length; j++) {
-        rightList.appendChild(leftList.options[j]);
-        j--;
-    }
-    rightList.selectedIndex = -1;
-}
-
-function moveLeft(e) {
-    var rightList = e.target.closest(".form").querySelector('.rightList');
-    if (rightList.options.selectedIndex == -1) {
-        alert("Nothing selected");
-    }
-    var leftList = e.target.closest(".form").querySelector('.leftList');
-
-    for (var j = 0; j < rightList.options.length; j++) {
-        if (rightList.options[j].selected) {
-            leftList.appendChild(rightList.options[j]);
-            j--;
-        }
-    }
-    leftList.selectedIndex = -1;
-}
-
-function moveLeftAll(e) {
-    var rightList = e.target.closest(".form").querySelector('.rightList'),
-        leftList = e.target.closest(".form").querySelector('.leftList'),
-        j;
-
-    for (j = 0; j < rightList.options.length; j++) {
-        leftList.appendChild(rightList.options[j]);
-        j--;
-    }
-    leftList.selectedIndex = -1;
-}

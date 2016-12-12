@@ -1,14 +1,10 @@
-﻿@using Epam.UserInfo.Logic;
-@using Epam.UserInfo.LogicContracts;
-@using System.Configuration;
-@using System.Globalization;
+﻿@using System.Globalization;
 @using Epam.UsersInfo.Entities;
+@using WebUI.Models;
 @{
     Layout = "~/_Layout.cshtml";
     if (IsPost)
     {
-        IUserLogic userLogic = new UserLogic();
-        string dateFormat = ConfigurationManager.AppSettings["DateFormat"];
         var name = Request["name"];
         var surname = Request["surname"];
         var patronymic = Request["patronymic"];
@@ -20,10 +16,10 @@
                 throw new ArgumentException("Name can't be null or empty");
             }
             DateTime tempDate;
-            if (DateTime.TryParseExact(dateOfBirth, dateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out tempDate))
+            if (DateTime.TryParseExact(dateOfBirth, Common.DateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out tempDate))
             {
                 string userName = $"{name}*{surname}*{patronymic}";
-                userLogic.Save(new User { Name = userName, DateOfBirth = tempDate });
+                 Common.UserBll.Save(new User { Name = userName, DateOfBirth = tempDate });
                 Response.Redirect("~/ShowUsers");
             }
             else
@@ -33,7 +29,7 @@
         }
         catch(Exception ex)
         {
-            <div class="alert alert-danger" style="margin-top: 60px">
+            <div class="alert alert-danger">
                 @ex.Message
             </div>
         }

@@ -18,5 +18,14 @@ namespace Epam.UserInfo.DalContracts
         int GetMaxId();
 
         bool Contains(int id);
+
+        bool Remove(int id);
+
+        Award GetByID(int id);
+
+        bool Update(int id, Award award);
+
+        bool IsAwarded(int id);
+
     }
 }

@@ -1,8 +1,6 @@
-﻿@using Epam.UserInfo.Logic;
-@using Epam.UserInfo.LogicContracts;
+﻿@using WebUI.Models;
 @{
     Layout = "~/_Layout.cshtml";
-    IUserLogic accountLogic = new UserLogic();
 }
 
 <div class="panel panel-default">
@@ -14,16 +12,23 @@
                     <th>Name</th>
                     <th>DateOfBirth</th>
                     <th>Age</th>
+                    <th>Awards</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var user in accountLogic.GetAll())
+                @foreach (var user in Common.UserBll.GetAll())
                 {
                     <tr>
                         <td>@user.Id</td>
                         <td>@user.Name</td>
                         <td>@user.DateOfBirth.ToShortDateString()</td>
                         <td>@user.Age</td>
+                        <td>
+                        @foreach (var award in Common.AwardBll.GetAwardsByIDs(Common.UserBll.GetUserAwardsIDs(user.Id)))
+                        {
+                            <text>@award.Title</text>
+                        }
+                        </td>
                     </tr>
                 }
             </tbody>

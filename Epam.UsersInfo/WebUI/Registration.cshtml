@@ -1,5 +1,4 @@
-﻿@using Epam.UserInfo.Logic;
-@using Epam.UserInfo.LogicContracts; 
+﻿@using WebUI.Models;
 @using Epam.UsersInfo.Entities;
 
 <!DOCTYPE html>
@@ -10,10 +9,8 @@
 </head>
 <body>
     @{
-        IAccountLogic accountLogic = new AccountLogic();
         bool loginError = false;
         bool passwordConfimError = false;
-
     }
     @if (IsPost)
     {
@@ -32,9 +29,9 @@
         {
             passwordConfimError = true;
         }
-        else if (accountLogic.CanRegister(login))
+        else if (Common.AccountBll.CanRegister(login))
         {
-            accountLogic.Add(new Account(login, password));
+            Common.AccountBll.Add(new Account(login, password));
             var returnUrl = Request["ReturnUrl"];
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
@@ -49,20 +46,20 @@
         }
     }
 
-    <div class="container">
-       @if (loginError)
-           {
-                <div class="alert alert-danger" style="margin-top: 60px">
-                    Login is already used
-                </div>
-           }
-           else if (passwordConfimError)
-           {
-                <div class="alert alert-danger" style="margin-top: 60px">
-                    Passwords do not match
-                </div>
-           }
-        
+    <div class="container col-xs-offset-4 col-xs-4">
+        @if (loginError)
+        {
+            <div class="alert alert-danger" style="margin-top: 60px">
+                Login is already used
+            </div>
+        }
+        else if (passwordConfimError)
+        {
+            <div class="alert alert-danger" style="margin-top: 60px">
+                Passwords do not match
+            </div>
+        }
+
         <form class="form-group form-login" action="~/Registration" method="post" role="form">
             <div class="form-group">
                 <label class="control-label" for="login">Login</label>
@@ -77,10 +74,12 @@
                 <input type="password" autocomplete="off" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Enter password again" />
             </div>
             <button type="submit" class="btn btn-success">Registration</button>
+            <button onclick="goBack()" class="btn btn-primary">Go Back</button>
         </form>
     </div>
 
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Include/Scripts.js"></script>
 </body>
 </html>

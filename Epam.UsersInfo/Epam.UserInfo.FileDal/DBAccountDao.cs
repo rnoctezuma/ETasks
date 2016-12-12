@@ -26,7 +26,7 @@ namespace Epam.UserInfo.FileDal
                 SqlCommand cmd = connection.CreateCommand();
                 cmd.CommandText = "INSERT INTO db.Account (Login, Password) VALUES (@login, @password); SELECT scope_identity()";
                 cmd.Parameters.AddWithValue("@login", account.Login);
-                cmd.Parameters.AddWithValue("@password", GetPasswordsHash(account.Password));
+                cmd.Parameters.AddWithValue("@password", account.Password);
                 connection.Open();
         
                 int result = cmd.ExecuteNonQuery();
@@ -62,7 +62,7 @@ namespace Epam.UserInfo.FileDal
                 SqlCommand cmd = connection.CreateCommand();
                 cmd.CommandText = "SELECT Login, Password FROM db.Account WHERE (Login=@login) AND  (Password=@password)";
                 cmd.Parameters.AddWithValue("@login", login);
-                cmd.Parameters.AddWithValue("@password", GetPasswordsHash(password));
+                cmd.Parameters.AddWithValue("@password", password);
                 connection.Open();
 
                 var reader = cmd.ExecuteReader();
@@ -87,20 +87,6 @@ namespace Epam.UserInfo.FileDal
                 }
                 return role;
             }
-        }
-
-        private static string GetPasswordsHash(string input)
-        {
-            var bytes = System.Text.Encoding.UTF8.GetBytes(input);
-            using (var hash = System.Security.Cryptography.SHA512.Create())
-            {
-                var hashedInputBytes = hash.ComputeHash(bytes);
-
-                var hashedInputStringBuilder = new System.Text.StringBuilder(128);
-                foreach (var b in hashedInputBytes)
-                    hashedInputStringBuilder.Append(b.ToString("X2"));
-                return hashedInputStringBuilder.ToString();
-            }
-        }
+        }      
     }
 }

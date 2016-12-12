@@ -1,18 +1,16 @@
-﻿@using Epam.UserInfo.Logic;
-@using Epam.UserInfo.LogicContracts;
+﻿@using WebUI.Models;
 @{
     Layout = "~/_Layout.cshtml";
     bool failed = false;
     if (IsPost)
     {
-        IUserLogic userLogic = new UserLogic();
         var Id = Request["deleteId"];
         int result;
         if (int.TryParse(Id, out result))
         {
             try
             {
-                userLogic.Delete(result);
+                Common.UserBll.Delete(result);
                 Response.Redirect("~/ShowUsers");
             }
             catch (Exception ex)
@@ -30,7 +28,7 @@
     }
 @if (failed)
 {
-    <div class="alert alert-danger" style="margin-top: 60px">
+    <div class="alert alert-danger">
         Id is not correct
     </div>
 }

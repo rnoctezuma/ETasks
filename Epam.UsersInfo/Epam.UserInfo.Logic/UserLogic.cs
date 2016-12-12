@@ -66,6 +66,35 @@ namespace Epam.UserInfo.Logic
             return userDao.GetAll().ToArray();
         }
 
+        public bool Contains(int ID)
+        {
+            return userDao.Contains(ID);
+        }
+
+        public User GetByID(int ID)
+        {
+            return userDao.GetByID(ID);
+        }
+
+        public bool Update(int id, User user)
+        {
+            if (user.Name.Contains('|'))
+            {
+                throw new ArgumentException("User info can't contains symbol '|'");
+            }
+
+            if (user.DateOfBirth > DateTime.Today)
+            {
+                throw new ArgumentException("Date of Birth can't be above than current date");
+            }
+
+            if (user.Age > 150)
+            {
+                throw new ArgumentException("User's age cant' be above than 150 years");
+            }
+            return userDao.Update(id, user);
+        }
+
         public bool Save(User newUser)
         {
             if (newUser.Name.Contains('|'))

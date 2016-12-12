@@ -18,26 +18,27 @@
                             <li><a href="~/AddUser">Add</a></li>
                             <li><a href="~/ShowUsers">Show all</a></li>
                             <li><a href="~/DeleteUser">Remove</a></li>
-                            <li><a href="~/CheckForEdit">Edit</a></li>
+                            <li><a href="~/CheckForEditUser">Edit</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Awards <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Add</a></li>
-                            <li><a href="#">Show all</a></li>
-                            <li><a href="#">Remove</a></li>
-                            <li><a href="#">Edit</a></li>
+                            <li><a href="~/Awards/AddAward">Add</a></li>
+                            <li><a href="~/Awards/ShowAwards">Show all</a></li>
+                            <li><a href="~/Awards/DeleteAward">Remove</a></li>
+                            <li><a href="~/Awards/CheckForEditAward">Edit</a></li>
                         </ul>
                     </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <h4>User: @User.Identity.Name <a href="~/Index.cshtml">Sign out</a></h4>
+                            <a href="~/Index" style="font-size:large">User: @User.Identity.Name Sign out</a>
                         }
                         else
-                        { <h4>Guest. <a href="~/Login.cshtml">Sign in</a></h4> }
-
+                        { <a href="~/Login" style="font-size:large"> Guest. Sign in</a> }
                     </li>
                 </ul>
             </div><!— /.navbar-collapse —>

@@ -85,5 +85,25 @@ namespace Epam.UserInfo.FileDal
         {
             return GetById(id) != null;
         }
+
+        bool IAwardDao.Remove(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        Award IAwardDao.GetByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IAwardDao.Update(int id, Award award)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IAwardDao.IsAwarded(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

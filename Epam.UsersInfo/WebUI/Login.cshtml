@@ -1,5 +1,4 @@
-﻿@using Epam.UserInfo.Logic;
-@using Epam.UserInfo.LogicContracts;
+﻿@using WebUI.Models;
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +10,6 @@
     
     @if (IsPost)
     {
-        IAccountLogic accountLogic = new AccountLogic();
         var login = Request["login"];
         var password = Request["password"];
 
@@ -21,7 +19,7 @@
             return;
         }
 
-        if (accountLogic.CanLogin(login, password))
+        if (Common.AccountBll.CanLogin(login, password))
         {
             FormsAuthentication.SetAuthCookie(login, createPersistentCookie: false);
 
@@ -44,7 +42,7 @@
             failed = true;
         }
     }
-    <div class="container">
+    <div class="container col-xs-offset-4 col-xs-4">
         @if (failed)
         {
             <div class="alert alert-danger" style="margin-top: 60px">
@@ -62,10 +60,13 @@
             </div>
             <input type="hidden" name="ReturnUrl" value="@Request["ReturnUrl"]" />
             <button type="submit" class="btn btn-success">Login</button>
+
+            <button onclick="goBack()" class="btn btn-primary">Go Back</button>
         </form>
     </div>
 
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Include/Scripts.js"></script>
 </body>
 </html>

@@ -49,7 +49,25 @@ namespace Epam.UserInfo.FileDal
 
         public bool AddUserAward(int userID, int awardID)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionStr))
+            {
+                try
+                {
+                    SqlCommand cmd = connection.CreateCommand();
+                    cmd.CommandText = "INSERT INTO db.[UsersAwards] (UserID, AwardID) VALUES (@userID, @awardID); SELECT scope_identity()";
+
+                    cmd.Parameters.AddWithValue("@userID", userID);
+                    cmd.Parameters.AddWithValue("@awardID", awardID);
+                    connection.Open();
+
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0;
+                }
+                catch
+                {
+                    throw new InvalidOperationException("User already has the same award!");
+                }
+            }
         }
 
         public bool Contains(int id)
@@ -86,10 +104,77 @@ namespace Epam.UserInfo.FileDal
                 }
             }
         }
+    
+        public bool Update(int id, User user)
+        {
+            using (var connection = new SqlConnection(connectionStr))
+            {
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = "UPDATE db.[User] SET Name=@name, Surname=@surname, Patronymic=@patronymic, DateOfBirth=@dateOfBirth WHERE ID=@id";
+
+                string[] parts = user.Name.Split('*');
+
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@name", parts[0]);
+                cmd.Parameters.AddWithValue("@surname", parts[1]);
+                cmd.Parameters.AddWithValue("@dateOfBirth", user.DateOfBirth);
+
+                if (parts[2] == String.Empty)
+                {
+                    cmd.Parameters.AddWithValue("@patronymic", DBNull.Value);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue("@patronymic", parts[2]);
+                }
+                connection.Open();
+
+                int result = cmd.ExecuteNonQuery();
+                return result > 0;
+            }
+        }
+
+        public User GetByID(int id)
+        {
+            using (var connection = new SqlConnection(connectionStr))
+            {
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = " SELECT ID, Name, Surname, Patronymic, DateOfBirth FROM db.[User] WHERE ID=@id";
+                cmd.Parameters.AddWithValue("@id", id);
+                connection.Open();
+
+                var reader = cmd.ExecuteReader();
+                User user = null;
+
+                while (reader.Read())
+                {
+                    int Id = (int)reader["Id"];
+                    string patronymic = reader["Patronymic"] is DBNull ? String.Empty : (string)reader["Patronymic"];
+                    string name = $"{(string)reader["Name"]} {(string)reader["Surname"]} {patronymic}";
+                    DateTime dateOfBirth = (DateTime)reader["DateOfBirth"];
+                    user = new User { Name = name, DateOfBirth = dateOfBirth, Id = Id };
+                }
+                return user;
+            }
+        }
 
         public int[] GetUserAwardsIDs(int ID)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionStr))
+            {
+                List<int> awardIDs = new List<int>();         
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = " SELECT AwardID FROM db.[UsersAwards] WHERE UserID=@ID";
+                cmd.Parameters.AddWithValue("@ID", ID);
+                connection.Open();
+
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    awardIDs.Add((int)reader["AwardID"]);
+                }
+                return awardIDs.ToArray();
+            }
         }
 
         public bool Remove(int id)

@@ -143,5 +143,15 @@ namespace Epam.UserInfo.FileDal
             File.WriteAllLines(fileName, lines.ToArray(), Encoding.Default);
             return true;
         }
+
+        User IUserDao.GetByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool IUserDao.Update(int id, User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
