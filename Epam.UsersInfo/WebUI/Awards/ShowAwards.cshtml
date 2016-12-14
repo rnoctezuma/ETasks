@@ -1,5 +1,9 @@
-﻿@using WebUI.Models;
+﻿@using Epam.UserInfo.WebUI.Models;
 @{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
     Layout = "~/_Layout.cshtml";
 }
 
@@ -9,6 +13,7 @@
             <thead>
                 <tr>
                     <th>Id</th>
+                    <th></th>
                     <th>Title</th>
                 </tr>
             </thead>
@@ -17,6 +22,7 @@
                 {
                     <tr>
                         <td>@award.Id</td>
+                        <td><img src="~/Images/Photos?id=@award.Photo.Id" alt="noneimage" class="img-rounded img-responsive" /></td>
                         <td>@award.Title</td>
                     </tr>
                 }

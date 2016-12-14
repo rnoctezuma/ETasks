@@ -11,12 +11,18 @@ namespace Epam.UserInfo.DalContracts
     {
         bool Add(Account account);
 
-        void SetRole(int ID);
-
         bool CanRegister(string login);
 
         bool CheckUser(string login, string password);
 
         string GetRole(string login);
+
+        Account GetByID(int id);
+
+        bool Contains(int id);
+
+        bool ChangeRole(int id);
+
+        IEnumerable<Account> GetAll();
     }
 }

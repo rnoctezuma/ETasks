@@ -11,5 +11,7 @@ namespace Epam.UsersInfo.Entities
         public int Id { get; set; }
 
         public string Title { get; set; }
+
+        public Photo Photo { get; set; }
     }
 }

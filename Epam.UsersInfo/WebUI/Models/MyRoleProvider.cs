@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 
-namespace WebUI.Models
+namespace Epam.UserInfo.WebUI.Models
 {
     public class MyRoleProvider : RoleProvider
     {
@@ -14,7 +14,6 @@ namespace WebUI.Models
         public override bool IsUserInRole(string username, string roleName)
         {
             return (!accountLogic.CanRegister(username));
-            //return (username.Equals("Admin") && roleName.Equals("Admin")) || roleName.Equals("User");
         }
 
         public override string[] GetRolesForUser(string username)

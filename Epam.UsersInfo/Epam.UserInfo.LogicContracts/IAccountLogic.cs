@@ -16,5 +16,13 @@ namespace Epam.UserInfo.LogicContracts
         bool CanLogin(string login, string password);
 
         string GetUsersRole(string login);
+
+        Account GetByID(int id);
+
+        bool Contains(int id);
+
+        bool ChangeRole(int id);
+
+        Account[] GetAll();
     }
 }

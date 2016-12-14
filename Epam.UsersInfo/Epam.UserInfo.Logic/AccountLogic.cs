@@ -52,5 +52,25 @@ namespace Epam.UserInfo.Logic
                 return hashedInputStringBuilder.ToString();
             }
         }
+
+        public Account GetByID(int id)
+        {
+            return accountDao.GetByID(id);
+        }
+
+        public bool Contains(int id)
+        {
+            return accountDao.Contains(id);
+        }
+
+        public bool ChangeRole(int id)
+        {
+            return accountDao.ChangeRole(id);
+        }
+
+        public Account[] GetAll()
+        {
+            return accountDao.GetAll().ToArray();
+        }
     }
 }

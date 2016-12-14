@@ -1,6 +1,10 @@
 ﻿@using Epam.UsersInfo.Entities;
-@using WebUI.Models;
+@using Epam.UserInfo.WebUI.Models;
 @{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
     Layout = "~/_Layout.cshtml";
     if (IsPost)
     {

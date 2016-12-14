@@ -6,7 +6,7 @@ using System.Configuration;
 using System.Linq;
 using System.Web;
 
-namespace WebUI.Models
+namespace Epam.UserInfo.WebUI.Models
 {
     public static class Common
     {
@@ -15,6 +15,8 @@ namespace WebUI.Models
         private static IAwardLogic awardLogic = new AwardLogic();
 
         private static IAccountLogic accountLogic = new AccountLogic();
+
+        private static IImageLogic imageLogic = new ImageLogic();
 
         private static string dateFormat = ConfigurationManager.AppSettings["DateFormat"];
 
@@ -41,6 +43,14 @@ namespace WebUI.Models
             get
             {
                 return accountLogic;
+            }
+        }
+
+        public static IImageLogic ImageBll
+        {
+            get
+            {
+                return imageLogic;
             }
         }
 

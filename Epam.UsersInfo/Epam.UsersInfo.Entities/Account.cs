@@ -21,5 +21,12 @@ namespace Epam.UsersInfo.Entities
             this.Login = login;
             this.Password = password;
         }
+
+        public Account(int id, string login, string role)
+        {
+            this.Login = login;
+            this.Role = role;
+            this.Id = id;
+        }
     }
 }

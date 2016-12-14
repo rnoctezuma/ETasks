@@ -1,0 +1,9 @@
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\bin\Debug\Epam.UserInfo.FileDal.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\bin\Debug\Epam.UserInfo.FileDal.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\bin\Debug\Epam.UserInfo.DalContracts.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\bin\Debug\Epam.UsersInfo.Entities.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\bin\Debug\Epam.UserInfo.DalContracts.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\bin\Debug\Epam.UsersInfo.Entities.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\obj\Debug\Epam.UserInfo.Dal.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\obj\Debug\Epam.UserInfo.FileDal.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.FileDal\obj\Debug\Epam.UserInfo.FileDal.pdb

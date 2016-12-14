@@ -44,6 +44,7 @@
     <Compile Include="AccountLogic.cs" />
     <Compile Include="AwardLogic.cs" />
     <Compile Include="DaoProvider.cs" />
+    <Compile Include="ImageLogic.cs" />
     <Compile Include="UserLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,9 +53,9 @@
       <Project>{68FE3E69-EB97-447F-90E7-8CBFE4C7BF6F}</Project>
       <Name>Epam.UserInfo.DalContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Epam.UserInfo.FileDal\Epam.UserInfo.FileDal.csproj">
+    <ProjectReference Include="..\Epam.UserInfo.FileDal\Epam.UserInfo.Dal.csproj">
       <Project>{A4613300-A331-4B41-9B74-6907CC9B042C}</Project>
-      <Name>Epam.UserInfo.FileDal</Name>
+      <Name>Epam.UserInfo.Dal</Name>
     </ProjectReference>
     <ProjectReference Include="..\Epam.UserInfo.LogicContracts\Epam.UserInfo.LogicContracts.csproj">
       <Project>{3021D710-E31A-4492-90D0-49EB530D0EE4}</Project>

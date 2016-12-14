@@ -1,7 +1,11 @@
-﻿@using WebUI.Models;
+﻿@using Epam.UserInfo.WebUI.Models;
 @using Epam.UsersInfo.Entities;
 
 @{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
     Layout = "~/_Layout.cshtml";
 
     if (IsPost)
@@ -48,4 +52,14 @@
     <button type="submit" class="btn btn-primary"> Edit award</button>
     <input type="hidden" name="ID" value="@Request["ID"]" />
     <input type="hidden" name="Visited" value="false" />
+</form>
+
+<form action="~/Images/UploadImage" method="post" enctype="multipart/form-data" class="form-inline custom-form">
+    <div class="form-group">
+        <label class="control-label">Select file for award:</label>
+        <input type="file" name="uploaded" class="form-control" />
+        <input type="hidden" name="awardId" value="@Request["ID"]" />
+        <input type="hidden" name="type" value="award" /> 
+        <button class="btn btn-primary" type="submit">Upload</button>
+    </div>
 </form>

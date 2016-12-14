@@ -1,0 +1,32 @@
+﻿@using Epam.UserInfo.WebUI.Models;
+@{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    Layout = "~/_Layout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Login</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var account in Common.AccountBll.GetAll())
+                {
+                    <tr>
+                        <td>@account.Id</td>
+                        <td>@account.Login</td>
+                        <td>@account.Role</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

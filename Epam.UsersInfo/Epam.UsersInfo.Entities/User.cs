@@ -14,6 +14,8 @@ namespace Epam.UsersInfo.Entities
 
         public DateTime DateOfBirth { get; set; }
 
+        public Photo Photo { get; set; }
+
         public int Age
         {
             get

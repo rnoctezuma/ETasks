@@ -17,13 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.UserInfo.DalContracts"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{BAC1ECB8-1AF6-4375-AEBE-DAD1D87F077F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.UserInfo.FileDal", "Epam.UserInfo.FileDal\Epam.UserInfo.FileDal.csproj", "{A4613300-A331-4B41-9B74-6907CC9B042C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.UserInfo.Dal", "Epam.UserInfo.FileDal\Epam.UserInfo.Dal.csproj", "{A4613300-A331-4B41-9B74-6907CC9B042C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{5F296217-34CE-46C0-B3BF-16CE806B26B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{D12E2303-1E01-4726-9CBE-A883BACCD4D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{3FA09326-8A68-470C-A2C8-A55DD0B60B43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.UserInfo.WebUI", "WebUI\Epam.UserInfo.WebUI.csproj", "{3FA09326-8A68-470C-A2C8-A55DD0B60B43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,6 @@
 ﻿using Epam.UserInfo.DalContracts;
-using Epam.UserInfo.FileDal;
+using Epam.UserInfo.Dal.DBDao;
+using Epam.UserInfo.Dal.FileDao;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -23,11 +24,13 @@ namespace Epam.UserInfo.Logic
                 UserDao = new DBUserDao();
                 AwardDao = new DBAwardDao();
                 AccountDao = new DBAccountDao();
+                ImageDao = new DBImageDao();
             }
         }
 
         public static IUserDao UserDao { get; }
         public static IAwardDao AwardDao { get; }
         public static IAccountDao AccountDao { get; }
+        public static IImageDao ImageDao { get; }
     }
 }
