@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Start Page</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/SignInForm.css" rel="stylesheet" />
+</head>
+<body>
+    @if (IsPost)
+    {
+        /*
+        var login = Request["login"];
+        var password = Request["password"];
+
+        if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
+        {
+            Response.SetStatus(HttpStatusCode.BadRequest);
+            return;
+        }
+
+        if (Common.UserBll.CanLoginUser(login, password))
+        {
+            FormsAuthentication.SetAuthCookie(login, createPersistentCookie: false);
+            Response.Redirect("ДОПИЛИТЬ СТРАНИЦУ");
+            return;
+
+
+        }
+        else
+        {
+            failed = true;
+        }*/
+    }
+
+
+    <div class="container col-xs-offset-4 col-xs-4">
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <div class="wrapper">
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">Please login or register</h2>
+                    <input type="text" class="form-control" id="login" name="login" placeholder="Email Address" required="" autofocus="" />
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" />
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                    <a class="btn btn-lg btn-primary btn-block" href="~/Authentication/SignUp">Register</a>
+                    <input type="hidden" name="ReturnUrl" value="@Request["ReturnUrl"]" />
+                </form>
+            </div>
+        }
+        else
+        {
+           <h1>НИШТЯК</h1>
+            /*ДОПИЛИТЬ ЗАВТРА*/
+        }
+    </div>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
